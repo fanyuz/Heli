@@ -1,0 +1,88 @@
+*{margin:0;padding:0;}
+/* Grid */
+.grid {
+	position: relative;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	list-style: none;
+	width:100%;
+	height:602px;
+	overflow: hidden;
+	
+}
+.content{
+	width: 100%;
+}
+.grid__item {
+	width: 100%;
+}
+
+.grid--xray .grid__item {
+	width: 100%;
+}
+
+.grid__item-title {
+	font-weight: bold;
+}
+
+.grid__item-title code {
+	color: #aaa;
+	font-weight: normal;
+	font-size: 0.85em;
+}
+
+.grid--xray .grid__img {
+	width:100%;
+}
+.grid__img{
+	position: relative;
+}
+.grid__img:before{
+	position: absolute;
+	content:"";
+	text-align: center;
+	top:50%;
+	left:50%;
+	z-index:8888;
+}
+
+.grid__img img {
+	max-width: 100%;
+	display: block;
+}
+
+.grid__img--border .tilt__back,
+.grid__img--border .tilt__front {
+	border: 1px solid #333;
+}
+
+.grid__img--border .tilt {
+	overflow: visible;
+} 
+
+/* Examples custom styles */
+.grid--examples {
+	max-width:100%;
+}
+
+.grid--examples .grid__img {
+	position: relative;
+	height: 0;
+	padding-bottom:100%;
+	overflow: hidden;
+}
+
+.grid--examples .tilt {
+	position: absolute;
+	top: 0;
+	height: 602px;
+}
+
+

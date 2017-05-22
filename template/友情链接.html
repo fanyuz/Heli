@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+	</style>
+	<body>
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--end-->
+		<section class="index_friendlink">
+			<div class="friendlink-bg">
+			<article class="index_friendlink_center">
+				<div class="flcm_top">
+					<h5>ERIENDSHIP LINK</h5>
+					<strong class="flcm_strong">友情链接</strong>
+				</div>
+				<div style="text-align: center;"><a class="shengm" href="javascript:;">友情链接</a></div>
+				<div class="yqlj-content">
+				
+				#foreach($item in ${Helper.GetArticleList(-1,31,-1)})
+				<a href="$item.Description">$item.title</a>
+				#end
+					
+				</div>
+			</article>
+			</div>
+		</section>
+		<section class="index_friendlink">
+			<article class="jhfriendlink">
+				<div style="text-align: center;" class="yjdl-jhlj"><a class="shengm" href="javascript:;">交换链接</a></div>	
+				<p>酷家乐愿与装修家居类、媒体、行业协会、家居企业等各类优秀网站建立合作，以促进双方网站的共同发展。欢迎搜索引擎收录且快照正常的网站与我们友链。</p>
+				<p>合作要求：首页友链要求百度权重不低于1，要着力践行以人民为中心的发展思想。</p>
+				<p>人民为中心的发展思想，不是一个抽象的、玄奥的概念，不能只停留在口头上、止步</p>
+				<p>于思想环节，而要体现在经济社会发展各个环节。</p>
+				<p>我国正处于并将长期处于社会主义初级阶段。</p>
+				<p>请复制以下代码放在贵公司网站合适位置：</p>
+				<a style="display: block;" href="javascript:;">酷家乐</a>
+				<textarea name="lj" style="font-size: 12px;width:586px;height: 106px;">
+					
+				</textarea>
+				<div style="margin:10px 0 10px;"><img src="${themepath}images/kgl_logo.png"/></div>
+				<textarea name="lj" id="lj" style="font-size: 12px;width:586px;height: 106px;margin-bottom:20px;">
+					
+				</textarea>
+				<div class="lxfs">
+					<strong>联系方式</strong>
+					<p>电话：0571-88936057</p>
+					<p>邮箱：kairui@qunhemail.com</p>
+					<p>QQ：2574757274</p>
+				</div>
+			</article>
+		</section>
+		<!--footer-->
+		<section style="width: 100%;background:#EAEAEA;">
+		<!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+				<!--end-->
+					</section>
+	</body>
+</html>
+
+

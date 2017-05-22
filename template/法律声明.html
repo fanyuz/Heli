@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+	</style>
+	<body>
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--法律声明-content-->
+		<section class="flcm">
+			<div class="flcm_top">
+				<h5>DECLARATION</h5>
+				<strong class="flcm_strong">法律声明</strong>
+			</div>
+			<div style="text-align: center;"><a class="shengm" href="javascript:;">声明文件</a></div>
+			<div class="center">
+                #foreach($item in ${Helper.GetArticleList(1,19,1)})
+				 ${item.Content}
+                #end
+			</div>
+		</section>
+		<!--end-->
+		<!--footer-->
+		<section style="width: 100%;background:#EAEAEA;">
+		<!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+				<!--end-->
+	
+	</section>
+	<!--end-->
+	</body>
+</html>
+
+

@@ -1,0 +1,656 @@
+@charset"utf-8";
+/* CSS Document */
+
+@media screen and (min-width: 1737px) {
+	.grid-wrapper{margin-left:-20px;}
+}
+
+@media screen and (max-width: 1440px) {
+	.wrapper-setas {
+		height: 40px;
+		position: relative;
+		width: 80px;
+		margin: 0 auto;
+	}
+	.wrapper-setas a {
+		width: 23px;
+		height: 23px;
+	}
+	.setaDir {
+		background: url(../images/zico_23.png) no-repeat;
+		right: 20px;
+		top: 10px;
+		width: 23px;
+		height: 23px;
+	}
+	.setaEsq {
+		background: url(../images/zico_26.png) no-repeat;
+		left: 0px;
+		top: 10px;
+		width: 23px;
+		height: 23px;
+	}
+	.setaDir:hover {
+		background: url(../images/zico_24.png) no-repeat;
+	}
+	.setaEsq:hover {
+		background: url(../images/zico_25.png) no-repeat;
+	}
+	
+	
+	
+	.cc .secc .tags {
+		margin-bottom: 40px;
+	}
+	.setaDir-2 {
+		background: url(../images/zico_23.png) no-repeat;
+		right: 20px;
+		top: 0px;
+		width: 23px;
+		height: 23px;
+	}
+	.setaEsq-2 {
+		background: url(../images/zico_26.png) no-repeat;
+		left: 0px;
+		top: 0px;
+		width: 23px;
+		height: 23px;
+	}
+	.setaDir-2:hover {
+		background: url(../images/zico_28.png) no-repeat;
+	}
+	.setaEsq-2:hover {
+		background: url(../images/zico_27.png) no-repeat;
+	}
+	.cc .listfc .f1 {
+		width: 60%;
+		margin: 0 auto;
+	}
+	.cc .listfc .f1 .cl {
+		float: none;
+		width: 100%;
+	}
+	.cc .listfc .f1 h2 {
+		font-size: 20px;
+	}
+	.cc .listfc .f1 .cr {
+		width: 50%;
+		margin: 20px auto 20px auto;
+		float: none;
+	}
+	.cc10 .prev {
+		left: 10px;
+	}
+	.cc10 .next {
+		right: 10px;
+	}
+}
+@media screen and (max-width: 1280px) {
+	/*新闻中心*/
+	.news-page .img-list .box {
+		width: 31%;
+	}
+	
+	/*文化理念*/
+	#page4 .cont-box {
+		margin: 25px 0 0;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.subpage .zarticle {
+		padding: 0 2%;
+	}
+	/*文化理念*/
+	.culture-page .ele_text {
+		left: 7.06%;
+		width: 85.88%;
+		margin: 0 auto;
+		padding: 40px 0;
+	}
+	#page2 .item h3 {
+		padding: 0 0 6px;
+	}
+	#page2 .item .more {
+		margin: 3% auto 0;
+	}
+	/*党群天地*/
+	.zarticle .secnav {
+		width: 100%;
+		padding: 15px 0px 0px;
+	}
+	.zarticle .secnav ul {
+		width: 96%;
+		margin: 0 auto;
+	}
+	.zarticle .secnav ul li {
+		width: 33%;
+		padding: 0;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 960px) {
+	/*公司概况*/
+	.scroll-page {
+		height: auto;
+	}
+	.animationbox,
+	.swiper-box,
+	.swiper-wrapper .swiper-slide {
+		position: relative;
+		height: auto;
+	}
+	.focus-hot {
+		display: none;
+	}
+	.scroll-page .footer {
+		position: relative;
+		bottom: 0;
+	}
+	.profile-page #page1 {
+		background-image: url(../images/gsgk1.jpg);
+	}
+	.profile-page .bg_pa{
+		display:none;
+	}
+	.profile-page #page2 {
+		background: #fafafa;
+	}
+	.profile-page #page3 {
+		background-image: url(../images/zbanner04.jpg);
+	}
+	.profile-page #page4 {
+		background-image: url(../images/gsgk6.jpg);
+	}
+	.cc1 .h1 {
+		font-size: 24px;
+		padding: 10px 0 0 0;
+	}
+	.cc1 .en {
+		padding: 0px 0px 15px;
+	}
+	.cc2 .h1 {
+		font-size: 24px;
+		padding: 10px 0 0 0;
+	}
+	.cc2 img{
+		width:100%;
+	}
+	.cc2 .en {
+		padding: 0px 0px 15px;
+	}
+	.cc4 .year {
+		display: none;
+	}
+	.cc4 .h1 {
+		padding: 10px 0 0 0;
+		font-size: 24px;
+	}
+	.cc4 .en {
+		padding: 0px 0px 15px;
+	}
+	.cc4 .detail {
+		padding: 20px 0 20px 0;
+	}
+	.cc4 .detail .d1 {
+		width: 60%;
+		margin: 0 auto;
+	}
+	.cc4 .prev {
+		left: 0;
+	}
+	.cc4 .next {
+		right: 0;
+	}
+	.cc4 .detail .d1 .num {
+		font-size: 40px;
+	}
+	.cc4 .detail .d1 .sy {
+		font-size: 18px;
+		padding: 0 0 10px 0;
+	}
+	.cc4 .detail .d1 .con {
+		font-size: 13px;
+		line-height: 20px;
+	}
+	#content-silder-carousel .item .minfotxt h2 {
+		display: none;
+	}
+	#content-silder-carousel .item .minfotxt p {
+		line-height: 18px;
+		width: 90%;
+	}
+	/*联系我们*/
+	.map_con{
+		position:relative;
+	}
+	.add img{
+		width:110%;
+	}
+	.add2 span{
+		font-size:15px;
+		line-height:30px;
+	}
+	.add{
+		font-size:13px;
+		margin-top:5px;
+	}
+	
+	
+	
+	
+	/*新闻中心*/
+	.news-page .img-list .box {
+		width: 47.32%;
+	}
+	
+	/*文化理念*/
+	.culture-page .bg_pa {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.culture-page .ele_text {
+		position: relative;
+		width: 90%;
+		margin: 0 auto;
+		left: 0;
+	}
+	#page4 .cont-box {
+		margin: 0;
+	}
+	#page2 .item li {
+		width: 50%;
+	}
+	.business-page #page1 {
+		background-image: url(../images/zbanner06.jpg);
+	}
+	.business-page #page3 {
+		background-image: url(../images/zbanner08.jpg);
+	}
+	.business-page #page4 {
+		background-image: url(../images/zbanner09.jpg);
+	}
+	.business-page #page5 {
+		background: #eeeeee;
+	}
+	
+	.ccfff .h1 {
+		font-size: 24px;
+		color: #ffffff;
+		text-align: center;
+		padding: 80px 0 0 0;
+	}
+	.ccfff .en {
+		padding: 0px 0px 15px;
+	}
+	.cc9 .h1 {
+		font-size: 24px;
+		color: #212121;
+		text-align: center;
+	}
+	.cc9 .en {
+		padding: 0px 0px 15px;
+	}
+	.business-page .animationbox,
+	.profile-page .animationbox {
+		position: static;
+		height: auto!important;
+	}
+	.business-page .scroll-page,
+	.profile-page .scroll-page {
+		height: auto!important;
+	}
+	.business-page .swiper-wrapper .swiper-slide,
+	.profile-page .swiper-wrapper .swiper-slide {
+		position: relative;
+	}
+	.business-page .element,
+	.profile-page .element {
+		background-size: auto 100%;
+		height: auto;
+	}
+	.business-page .bg_pa,
+	.profile-page .bg_pa {
+		position: absolute;
+	}
+	.business-page .ele_text,
+	.profile-page .ele_text {
+		position: static;
+		margin: 0 auto;
+		width: 98%;
+		overflow: hidden
+	}
+	.ele_text2 {
+		position: static;
+		margin: 0 auto 20px auto;
+		width: 98%;
+		overflow: hidden
+	}
+	.ele_text3 {
+		position: static;
+		margin: 0 auto;
+		width: 98%;
+		overflow: hidden
+	}
+	
+	.content .item {
+		margin-right: 5px;
+	}
+	.cc8 .secnav ul {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.cc .secnav ul li {
+		width: 50%;
+		padding: 0;
+		text-align: center;
+	}
+	.business-page .secnav ul li {
+		width: 33.33%;
+	}
+	.cc6 .secnav ul {
+		width: 90%;
+		margin: 0 auto;
+	}
+	#page4 li {
+		text-align: center;
+	}
+	.content .item .li2 .minfo h2 {
+		padding: 60% 20% 0 20%;
+		font-size: 14px;
+	}
+	.cc .listf {
+		display: none;
+	}
+	.cc .listfc .f1 {
+		padding-top: 10px;
+	}
+	.content .item .li .minfo h2 {
+		padding: 10%;
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 790px) {
+	/*联系我们*/
+	.add{
+		width:33.3%;
+	}
+	.add img {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 768px) {
+	
+	/*文化理念*/
+	.culture-page .ele_text {
+		width: 96%;
+	}
+	.linian1{
+		width:30%;
+		margin-right:5%;
+	}
+	.linian1 span{
+		font-size: 20px;
+	}
+	.linian1 p{
+		font-size:16px;
+	}
+	/*党群天地*/
+	.zarticle .secnav ul li a {
+		font-size: 14px;
+	}
+	.zarticle .list {
+		padding: 20px 0px 30px;
+	}
+	.zarticle .list li {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.zarticle .list li a {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 80%;
+	}
+	/*页码*/
+	.page {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 640px) {
+	/*联系我们*/
+	.add{
+		width:50%;
+	}
+	.sub-nav a {
+		margin:0 10px;
+	}
+	
+	/*文化理念*/
+	#page1 .ele-cont3{
+		font-size:18px;
+		letter-spacing:20px;
+	}
+	#page1 .ele-cont3 span{
+		margin-right:30px;
+	}
+	.linian1{
+		width:40%;
+		margin-right:10%;
+		float:left;
+	}
+	.shouce{
+		margin-top:0px;
+	}
+	.shouce1{
+		float:none;
+		width:100%;
+		text-align:center;
+		margin:0 0;
+	}
+}
+@media screen and (max-width: 480px) {
+	/*联系我们*/
+	.add{
+		width:100%;
+	}
+	.add1{
+		display:none;
+	}
+	.add2{
+		position:relative;
+	}
+	.sub-nav a {
+		margin:0 0px;
+	}
+	/*新闻中心*/
+	.news-page .img-list {
+		margin: 0;
+	}
+	.news-page .article {
+		padding: 20px 10px;
+	}
+	.news-page .img-list .box {
+		width: 100%;
+		margin: 0 0 28px;
+	}
+	.scroll-loading {
+		font-size: 22px;
+		margin: 1% 0 0;
+	}
+	
+	/*企业理念*/
+	.culture-page .title {
+		font-size: 22px;
+	}
+	.culture-page .ele_text {
+		padding: 25px 0;
+	}
+	.culture-page .title {
+		padding: 0 0 20px;
+	}
+	#page1 .ele-cont h2 {
+		font-size: 20px;
+	}
+	.linian1{
+		width:100%;
+		margin-right:0;
+		float:none;
+	}
+}
+@media screen and (max-width: 320px) {
+	/*精品集萃*/
+	.sub-nav a {
+		line-height: 36px;
+		padding: 22px 9px 0;
+		font-size: 16px;
+		color: #282828;
+		margin:0 0px;
+	}
+	/*企业理念*/
+	#page1 .ele-cont3 span{
+		margin-right:73px;
+	}
+	
+	/*党群天地*/
+	.zarticle .list li a {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 60%;
+	}
+	.accordiont .l {
+		width: 35%;
+		font-size: 12px;
+	}
+	.accordiont .m {
+		font-size: 12px;
+	}
+	.accordiont .r {
+		font-size: 12px;
+		padding-right: 30px;
+	}
+	.accordion .link .l {
+		width: 35%;
+		font-size: 12px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.accordion .link .m {
+		font-size: 12px;
+	}
+	.accordion .link .r {
+		font-size: 12px;
+	}
+}
+/*高度兼容*/
+@media screen and (max-height: 900px) {
+	.ccfff .en {
+		padding: 5px 0 5px 10px;
+	}
+	.cc .secc .tags {
+		margin-bottom: 2px;
+	}
+	.cc .listf {
+		margin-bottom: 0;
+	}
+	.cc .listfc .f1 {
+		padding-top: 10px;
+	}
+	.cc .listfc .f1 .cr {
+		width: 30%;
+	}
+	.cc7 img {
+		margin: 5px 0 5px 0;
+	}
+}
+@media screen and (max-height: 768px) {
+	/*.focus-hot{
+        display: none;
+    }*/
+	
+	.scroll-page {
+		height: auto;
+	}
+	.animationbox,
+	.swiper-box,
+	.swiper-wrapper .swiper-slide {
+		position: relative;
+		height: auto;
+	}
+	.culture-page .bg_pa {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.culture-page .ele_text {
+		position: relative;
+		max-width:1040px;
+		margin: 0 auto;
+		left: 0;
+		padding: 25px 0;
+	}
+	.scroll-page .footer {
+		position: relative;
+		bottom: 0;
+	}
+	.culture-page .animationbox,
+	.business-page .animationbox,
+	.profile-page .animationbox {
+		position: static;
+		height: auto!important;
+	}
+	.business-page .scroll-page,
+	.profile-page .scroll-page {
+		height: auto!important;
+	}
+	.business-page .swiper-wrapper .swiper-slide,
+	.culture-page .swiper-wrapper .swiper-slide,
+	.profile-page .swiper-wrapper .swiper-slide {
+		position: relative;
+	}
+	.culture-page .element,
+	.business-page .element,
+	.profile-page .element {
+		background-size: auto 100%;
+		height: auto;
+	}
+
+	.business-page .ele_text,
+	.profile-page .ele_text {
+		position: relative;
+		margin: 0 auto!important;
+		width: 98%;
+		left: auto;
+		padding: 25px 0;
+	}
+	.profile-page .ele_text2 {
+		padding: 0 0 10px;
+	}
+	#slider-carousel {
+		padding: 15px 0 5px;
+	}
+	.business-page .bg_pa,
+	.profile-page .bg_pa {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.cc4 .detail {
+		padding: 100px 0 70px;
+	}
+	.ele_text2 {
+		position: static;
+		margin: 0 auto 20px auto;
+		width: 98%;
+	}
+	.business-page .ele_text3 {
+		position: relative;
+		margin: 0 auto;
+		padding: 25px 0;
+		width: 98%;
+		overflow: hidden;
+		left: 0;
+	}
+}

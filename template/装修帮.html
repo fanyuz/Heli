@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+		.center_page_two{position: initial;margin: 160px auto 0;}
+		.red_bor:hover{color: #15cae9}
+	</style>
+	<body>
+        <script type="text/javascript">
+            $(function () {
+
+            	$(".nav_a4").css({"color":"#23c9e9","background":"url(/themes/default/Public/images/nav_a4.png) no-repeat top center"});
+                $(".display").hide();
+                $(".down").click(function () {
+                    $(".show").toggle();
+                    $(".display").toggle();
+                });
+                $(".ewm1").hide();
+                $(".ewm_hover").hover(function () {
+                    $(".ewm1").toggle();
+                });
+                $(".weixin_ewm").hide();
+                $(".weixin").hover(function () {
+                    $(".weixin_ewm").toggle();
+                });
+                var t = $(".red_bor").outerHeight(true);
+                var b = $(".red_bor").offset().top;
+                $(".red_bor").click(function () {
+
+                    $("html,body").animate({ "scrollTop": t + b }, 800);
+                });
+                $(".alert_gb1").click(function () {
+                    $(".alert1").css("display", "none");
+                    $(".alert_box").css("display","none");
+                });
+               
+                $(".zxb_boxr").css("cursor", "pointer")
+                $(".zxb_box").click(function () {
+                    $(".alert1").css("display", "block");
+                    $(".alert_box").css("display", "block");
+                    $('.alert .snsj a').html($(this).find('.zxb_boxl h1').html());
+                    $('.alert p').html($(this).find('.zxb_boxr').html());
+                    $('.alert p img').remove();
+                });
+            });
+	</script>
+	<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		
+		
+		<!--alert-->
+
+		<!-- #set($i =1)
+		#foreach($item in ${Helper.GetArticleList(6,4,-1)}) -->
+		<div class="alert_box">
+			<div class="alert alert1">
+				<a href="javascript:;" class="alert_gb alert_gb1"></a>
+				<div class="snsj"><a href="javascript:;">title</a></div>
+				<p>ContentContentContentContentContentContentContentContent</p>
+			</div>
+		</div>
+		<!-- #set($i =$i+1)
+		#end -->
+		 
+		<!--end-->
+		
+		<section class="center_page_two" style="overflow:hidden;margin-bottom:100px;">
+			<article class="center_top">
+				<h1>带你装修带你飞-装修帮</h1>
+				<p>—</p>
+				<strong>装修帮一步步指导你施工</strong>
+			</article>
+			<ul class="center_ul">
+				<li>
+					<div class="center_ul_div"><img src="${themepath}images/iconfont-caidan.png"/></div>
+					<h1>装修方式-<strong>全包</strong></h1>
+					<div>
+					<p class="jj">
+						从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+					</p>
+					<strong>优点:</strong>
+					<p>1、业主掌握主动权，正所谓“抓重点”</p>
+					<p>
+						2、主要建材自己购买，不论在品质上还是经济上都更放心。
+					</p>
+					<p>
+						3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+					</p>
+					<div class="jj">
+						<strong>缺点:</strong>
+						<p>
+						1、还是要花一些时间去跑建材市场，采购 材料。
+						</p>
+						<p>
+							2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+						</p>
+						<p>
+							3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+						</p>
+					</div>
+						<p class="rig"><a href="javascript:;">点击进入</a></p>		
+					</div>
+				</li>
+				<li>
+					<div class="center_ul_div"><img src="${themepath}images/shoj.png"/></div>
+					<h1>装修方式-<strong>全包</strong></h1>	
+						<div>
+								<p class="jj">
+									从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+								</p>
+								<strong>优点:</strong>
+								<p>1、业主掌握主动权，正所谓“抓重点”</p>
+								<p>
+										2、主要建材自己购买，不论在品质上还是经济上都更放心。
+								</p>
+								<p>
+									3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+								</p>
+								<div class="jj">
+									<strong>缺点:</strong>
+									<p>
+										1、还是要花一些时间去跑建材市场，采购 材料。
+									</p>										<p>
+										2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+									</p>
+									<p>
+										3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+									</p>
+								</div>
+								<p class="rig"><a href="javascript:;">点击进入</a></p>
+							</div>
+						</li>
+						<li>
+							<div class="center_ul_div"><img src="${themepath}images/1.png"/></div>
+							<h1>装修方式-<strong>全包</strong></h1>
+							<div>
+								<p class="jj">
+									从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+								</p>
+								<strong>优点:</strong>
+								<p>1、业主掌握主动权，正所谓“抓重点”</p>
+								<p>
+										2、主要建材自己购买，不论在品质上还是经济上都更放心。
+								</p>
+								<p>
+									3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+								</p>
+								<div class="jj">
+									<strong>缺点:</strong>
+									<p>
+										1、还是要花一些时间去跑建材市场，采购 材料。
+									</p>
+									<p>
+										2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+									</p>
+									<p>
+									3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+								</p>
+							</div>
+						<p class="rig"><a href="javascript:;">点击进入</a></p>	
+					</div>
+				</li>
+			</ul>
+		</section>
+		<style>
+			
+		</style>
+		<section class="zxb_content">
+			<article class="zxb_content_center">
+				<div style="text-align: center;"><a href="javascript:;"><img src="${themepath}images/down22_03.png" alt=""></a></div>
+				<div class="zxb_zxz">
+					<a href="javascript:;" class="zxb_zxzl_a1">装修之旅</a>
+					<a href="javascript:;" class="red_bor">∨</a>
+					<div style="width:1200px;margin:0 auto;position: relative;height: 1500px;">
+					  <div class="zxzl_main">
+						  <ul>
+						  
+						#set($i =1)
+			#foreach($item in ${Helper.GetArticleList(6,4,-1)})
+							<li>
+								<div class="zxb_box zxb_box_$i$i box_hover">
+									<div class="fl zxb_boxl">
+										<h1>$item.title</h1>
+										<p>$!{Helper.SubString(${item.Ftitle},24,"...")} </p>
+									</div>
+									<div class="fl zxb_boxr zxb_boxr$i">
+										<img src="${item.Pic}" />
+										 ${Helper.SubString(${item.Description},78,"...")} 
+									</div>
+								</div>
+							</li>
+							#set($i =$i+1)
+							#end
+							</ul>
+						</div>
+					</div>
+					<div class="box_bg">
+						<a class="box_bg_a" href="javascript:;">恭喜！装修完了去度假吧！</a>
+						<div class="box_bg_img"><img src="${themepath}images/box-yuan.png"/></div>
+					</div>
+				</div>
+			</article>
+		</section>
+		<!--footer-->
+		<section style="width: 100%;background:#EAEAEA;margin-top:100px;">
+            <!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+		</section>
+	</body>
+</html>
+
+

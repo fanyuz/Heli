@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+     #parse("../Public/_headindex.html") 
+	<body>
+		<!--header-->
+        #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--fixed right-->
+		<a href=""class="downn"><img src="${themepath}images/down.png"/></a>	
+		<!--end-->
+		<script>
+				$(function(){
+					$(".yun-dj").hover(function(){
+						$(this).find(".yun-dj-fr").css("display","block");
+					},function(){
+						$(this).find(".yun-dj-fr").css("display","none");
+					})
+				})
+			</script>
+			<style>
+				.section2-content>div{position: absolute;left: 0;top: 0;}
+				.section2-content span{position: absolute;z-index: 55;}
+
+				.yun-dj:hover .yun-dj-fl{background:url(/themes/default/Public/images/yun-dg-ts_03.png) no-repeat;width: 66px;height: 66px;}
+				.yun-dj-fl{background:url(/themes/default/Public/images/yun-dg-ts_07.png) no-repeat;width: 66px;height: 66px;}
+				.yun-dj-fr{background: url(/themes/default/Public/images/dg-ts-xq_03.png) no-repeat;width: 231px;height: 130px;padding: 15px 14px 0;}
+				.yun-dj-fr-fr{width: 130px;margin-left: 12px;}
+				.yun-dj-fr-fr p{font-size: 12px;color: #9f9f9f;margin-bottom: 8px;}
+				.yun-dj-fr-fr em{font-weight: normal;display: block;font-style:normal;font-size: 14px;color: #333333;}
+				.yun-dj-fr-fr a{font-size: 12px;color: #009ce5;}
+				.yun-dj-fr{display: none;}
+
+			</style>
+		<div id="fullpage">
+		<!--page1-->
+			<div class="section position-relative" id="section1">
+				<section class="padding">
+					<div class="content">
+						<ul class="grid grid--examples">
+							<li class="grid__item">
+								<div class="grid__img grid__img--example-2">
+                                    #foreach($item in ${Helper.GetChannelList(1,8,-1,-1,"[index]")})
+									<img src="${item.TitleImage}" class="tilt-effect" alt="grid02"  data-tilt-options='{ "movement": { "perspective" : 700, "translateX" : -15, "translateY" : -15, "translateZ" : 10, "rotateX" : 2, "rotateY" : 10 } }' />
+
+								    #end
+                                </div>
+							</li>
+						</ul>
+						<!-- <div class="banner">
+							<ul>
+								<li style="background:url(images/page1_banner.png) no-repeat;font-size:25px;padding:180px 0;font-family: '黑体';color: #7e8484;">北京简尚装饰是丽贝亚集团旗下院属室内设计研究机构，是以商业空间装饰设计与施工<br />
+为核心业务的多元化专业化装修解决方案服务商。</li>
+								<li style="background:#ccc;"></li>
+							</ul>
+						</div> -->
+						<div class="RLL leftt"></div>
+						<div class="RLL righttt"></div>
+						<p class="grid__item-p">北京简尚装饰是丽贝亚集团旗下院属室内设计研究机构，是以商业空间装饰设计与施工<br />
+为核心业务的多元化专业化装修解决方案服务商。</p>
+					</div>
+					<article class="section1_bottom">
+                         #foreach($item in ${Helper.GetChannelList(1,8,-1,-1,"[index]")})
+						<strong><a href="javascript:;">${item.keyword}</a></strong>
+						<div>
+							${item.Description}
+						</div>
+                        #end
+						<a href="/gnjs.aspx">何狸装修完整介绍</a>
+				  </article>
+				</section>
+			</div>
+			<!--end-->
+			<!--page2-->
+			
+			
+			<div class="section position-relative" id="section2" style="padding-top: 80px;">
+				<div class="section2-content">
+					<div style="z-index: 10;"><img title="shufang-dj" src="${themepath}yun-keting/客厅f1-01灯具01.png"/></div>
+					<div style="z-index: 8;"><img title="shufang-dsg" src="${themepath}yun-keting/客厅f1-02电视柜01.png"/></div>
+					<div style="z-index: 7;"><img title="shufang-sfz" src="${themepath}yun-keting/客厅f1-03沙发组01.png"/></div>
+					<div style="z-index: 6;"><img title="shufang-ps" src="${themepath}yun-keting/客厅f1-04配饰01.png"/></div>
+					<div style="z-index: 5;"><img title="shufang-dt" src="${themepath}/yun-keting/客厅f1-05地毯01.png"/></div>
+					<div style="z-index: 4;"><img title="shufang-dsq" src="${themepath}yun-keting/客厅f1-06电视墙01.png"/></div>
+					<div style="z-index: 3;"><img title="shufang-bjq" src="${themepath}yun-keting/客厅f1-07背景墙01.png"/></div>
+					<div style="z-index: 2;"><img title="shufang-yc" src="${themepath}yun-keting/客厅f1-08阳台、窗帘01.png"/></div>
+					<div style="z-index: 1;"><img title="shufang-th" src="${themepath}yun-keting/客厅f1-09天花01.png"/></div>
+					<div style="z-index: 0;"><img title="shufang-dm" src="${themepath}yun-keting/客厅f1-10地面01.png"/></div>
+					
+					<span class="yun-dj" style="left: 30%;top:10%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 48%;top:20%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 48%;top:50%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 20%;top:50%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 30%;top:70%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 57%;top:80%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 80%;top:50%;display: block;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+				</div>
+				
+			</div>
+			<!--end-->
+			
+			<!--page3-->
+			<div class="section position-relative" id="section3">
+				<section class="center_page_two">
+						<article class="center_top">
+							<h1>带你装修带你飞-装修帮</h1>
+							<p>—</p>
+							<strong>装修帮一步步指导你施工</strong>
+						</article>
+						<ul class="center_ul">
+							<li>
+								<div class="center_ul_div"><img src="${themepath}images/iconfont-caidan.png"/></div>
+								<h1>装修方式-<strong>全包</strong></h1>
+								<div>
+									<p class="jj">
+										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+									</p>
+									<strong>优点:</strong>
+									<p>1、业主掌握主动权，正所谓“抓重点”</p>
+									<p>
+										2、主要建材自己购买，不论在品质上还是经济上都更放心。
+									</p>
+									<p>
+										3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+									</p>
+									<div class="jj">
+										<strong>缺点:</strong>
+										<p>
+											1、还是要花一些时间去跑建材市场，采购 材料。
+										</p>
+										<p>
+											2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+										</p>
+										<p>
+											3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+										</p>
+									</div>
+									<p class="rig"><a href="/zxb.aspx">点击进入</a></p>		
+								</div>
+							</li>
+							<li>
+								<div class="center_ul_div"><img src="${themepath}images/shoj.png"/></div>
+								<h1>装修方式-<strong>全包</strong></h1>
+								<div>
+									<p class="jj">
+										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+									</p>
+									<strong>优点:</strong>
+									<p>1、业主掌握主动权，正所谓“抓重点”</p>
+									<p>
+										2、主要建材自己购买，不论在品质上还是经济上都更放心。
+									</p>
+									<p>
+										3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+									</p>
+									<div class="jj">
+										<strong>缺点:</strong>
+										<p>
+											1、还是要花一些时间去跑建材市场，采购 材料。
+										</p>
+										<p>
+											2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+										</p>
+										<p>
+											3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+										</p>
+									</div>
+									<p class="rig"><a href="/zxb.aspx">点击进入</a></p>
+								</div>
+							</li>
+							<li>
+								<div class="center_ul_div"><img src="${themepath}images/1.png"/></div>
+								<h1>装修方式-<strong>全包</strong></h1>
+								<div>
+									<p class="jj">
+										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
+									</p>
+									<strong>优点:</strong>
+									<p>1、业主掌握主动权，正所谓“抓重点”</p>
+									<p>
+										2、主要建材自己购买，不论在品质上还是经济上都更放心。
+									</p>
+									<p>
+										3、辅助材料由施工方采购比较省事，不会差个螺丝、钉子就跑一趟建材市场。
+									</p>
+									<div class="jj">
+										<strong>缺点:</strong>
+										<p>
+											1、还是要花一些时间去跑建材市场，采购 材料。
+										</p>
+										<p>
+											2、辅料虽小，但所购数量很容易被忽视。竣工后认真验收，确认所购材料使用情况，以免被“偷梁换柱”。
+										</p>
+										<p>
+											3、签定合同时要明确施工方的半包范围，避免低价签单而后期增项。
+										</p>
+									</div>
+									<p class="rig"><a href="/zxb.aspx">点击进入</a></p>	
+								</div>
+							</li>
+						</ul>
+				</section>
+			</div>
+			<!--end-->
+			<!--page4-->
+			<div class="section position-relative" id="section4">
+				<section class="center_page_three">
+					<article class="content">
+						<h1><a href="javascript:;"><img src="${themepath}images/xysj.png" alt=""></a></h1>
+						<p style="color: #fff;">
+							设计DIY 最专业 最权威 最互动 自主家装解决方案尽在云设计<br />
+							我们的专业技能+你的审美=河狸装修云设计
+						</p>
+					</article>
+					<article class="design">
+						<ul>
+							<li>
+								<div><img src="${themepath}images/page4_1_03.png"></div>
+								<h1>客 厅</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li class="Lag">
+								<div><img src="${themepath}images/page_4_2_03.png"></div>
+								<h1>餐 厅</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li>
+								<div><img src="${themepath}images/page_4_2_05.png"></div>
+								<h1>卧 厅</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li class="Lag">
+								<div><img src="${themepath}images/page_4_2_07.png"></div>
+								<h1>书 房</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li>
+								<div><img src="${themepath}images/page_4_2_09.png"></div>
+								<h1>儿童房</h1>
+								<p>
+								设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li class="Lag">
+								<div><img src="${themepath}images/page_4_2_11.png"></div>
+								<h1>卫生间</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+							<li>
+								<div><img src="${themepath}images/page_4_2_13.png"></div>
+								<h1>厨 房</h1>
+								<p>
+									设计DIY 最专业<br />自主家装解决方案尽在<br />云设计我们
+								</p>
+							</li>
+						</ul>
+					</article>
+				</section>
+			</div>
+			<!--end-->
+			<!--page5-->
+			<div class="section position-relative" id="section5">
+				<section class="content_page_four">
+					<article class="page_four_top">
+						<h1>装修微社区-设计<span>邦</span></h1>
+						<div>—</div>
+						<p>装修有啥问题？来设计邦问问吧？</p>
+					</article>
+					<article class="liu">
+						<figure>
+							<figcaption>自主家装解决方案</figcaption>
+							<img src="${themepath}images/cc.jpg">
+							<p>装修设计内容精选</p>
+						</figure>
+						<figure>
+							<figcaption>自主家装解决方案</figcaption>
+							<img src="${themepath}images/dd.jpg">
+							<p>装修设计内容精选</p>
+						</figure>
+						<figure>
+							<figcaption>自主家装解决方案</figcaption>
+							<img src="${themepath}images/ee.jpg">
+							<p>装修设计内容精选</p>
+						</figure>
+						<div class="clear"></div>
+					</article>
+					<div class="clear"></div>
+					<article class="asdfsad">
+						<ul>
+							<li>
+								<h1>[家居买手NO.3]提问解疑难赢奖品</h1>
+								<div class="detailed">
+									<div>
+										<img src="${themepath}images/ff.jpg">
+										家居专业买手为你答疑，专业买手为你嗒嗒疑，问赢抱枕/零钱包/5份定抱枕/零钱包/5份定<br />
+										<a href="javascript:;">[详细]</a>
+									</div>
+								</div>
+								<ul class="detailed_ul">
+									<li>[家居买手NO.2]提问赢定制装修方案问赢定制装修方案问赢定制装...</li>
+									<li>[家居买手NO.2]提问解决网购家具难问解决网购家具难题</li>
+									<li>闹哪样！家具居然要自己安装？要自己安装？</li>
+								</ul>
+							</li>
+							<li>
+								<h1>[家居买手NO.3]提问解疑难赢奖品</h1>
+								<div class="detailed">
+									<div>
+										<img src="${themepath}images/ff.jpg">
+										家居专业买手为你答疑，专业买手为你嗒嗒疑，问赢抱枕/零钱包/5份定抱枕/零钱包/5份定<br />
+										<a href="javascript:;">[详细]</a>
+									</div>
+								</div>
+								<ul class="detailed_ul">
+									<li>[家居买手NO.2]提问赢定制装修方案问赢定制装修方案问赢定制装...</li>
+									<li>[家居买手NO.2]提问解决网购家具难问解决网购家具难题</li>
+									<li>闹哪样！家具居然要自己安装？要自己安装？</li>
+								</ul>
+							</li>
+							<li>
+								<h1>[家居买手NO.3]提问解疑难赢奖品</h1>
+								<div class="detailed">
+									<div>
+										<img src="${themepath}images/ff.jpg">
+										家居专业买手为你答疑，专业买手为你嗒嗒疑，问赢抱枕/零钱包/5份定抱枕/零钱包/5份定<br />
+										<a href="javascript:;">[详细]</a>
+									</div>
+								</div>
+								<ul class="detailed_ul">
+									<li>[家居买手NO.2]提问赢定制装修方案问赢定制装修方案问赢定制装...</li>
+									<li>[家居买手NO.2]提问解决网购家具难问解决网购家具难题</li>
+									<li>闹哪样！家具居然要自己安装？要自己安装？</li>
+								</ul>
+							</li>
+						</ul>
+					</article>
+				</section>
+			</div>
+			<!--end-->
+			<!--page6-->
+			<div class="section" id="section6">
+				<section class="foot">
+					<article class="foot_strong">
+						<strong>合作伙伴</strong>
+						<p>—</p>
+					</article>
+					<article class="foot_ul">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</article>
+				</section>
+				<hr style="color:#D6D6D6;opacity: 0.3;">
+			<!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+				<!--end-->
+			</div>
+			<!--page6 end-->
+		</div>
+		<script src="${themepath}js/tiltfx.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
+

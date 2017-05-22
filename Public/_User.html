@@ -1,0 +1,506 @@
+﻿<!--注册-->
+		<section class="regsiter">
+			<div class="loginbar_left">
+				<div class="loginbar_left1"><img src="${themepath}images/fflogo.png"/></div>
+				<div class="loginbar_left2"><a href="javascript:;">使用以下账号直接登录</a></div>
+				<div class="loginbar_left3">
+					<a href="javascript:;"><img src="${themepath}images/loginbar_01.png"/></a>
+					<a href="javascript:;"><img style="margin:0 11px;" src="${themepath}images/loginbar_03.png"/></a>
+					<a href="javascript:;"><img src="${themepath}images/loginbar_05.png"/></a>
+				</div>
+				<div class="loginbar_left4">你还没有注册？<a href="javascript:;"  class="zc">立即注册</div>		
+			</div>
+			<div class="loginbar_right">
+				<a href="javascript:;" class="shut" style="margin:5px 15px 0 0;"></a>
+				<strong class="zc_strong" style="margin-top:10px;">创建用户</strong>
+				<div class="shouji"><input type="text" name="upc" class="upc" id="upc" placeholder="手机号/邮箱"/></div>
+				<div class="shouji shoujipass"><input type="password" name="pass" id="pass" class="upc" placeholder="密码"/></div>
+				<div class="shouji shoujiyzm">
+						<input type="text" name="yzm" id="yzm" class="upc fl" placeholder="验证码"/>
+						<div class="fl" style="margin-left:5px;margin-top:2px;"><img id="ajaxyzm" onclick="this.src='/manage/verifyimage.aspx?time=' + Math.random()" src="/manage/verifyimage.aspx?time=' + Math.random()" /></div>
+						<div class="fr" style="margin:5px;"><a href="javascript:reloadcode();" ><img src="${themepath}images/shuaxin.png"/></a></div>
+						<div class="clear"></div>
+				</div>
+				<div style="margin:5px 0;font-size: 12px;"><input type="checkbox" name="check" id="check" checked="checked"/><label for="check">已阅读并同意<a href="javascript:;">《酷家乐用户使用协议》</a></label></div>
+				<div><button class="bottom" id="SignUp">注册</button></div>
+			</div>
+			
+
+
+			<div class="clear"></div>
+		</section>
+		<!--end-->
+
+
+			<script>
+				$(function(){
+					yy_banner(0)
+					yy_banner2(0)
+					function yy_banner(index){
+
+						len=$(".yy-sjfa-banner ul li").length;
+						liWidth=$(".yy-sjfa-banner ul li").outerWidth(true);
+						$(".yy-sjfa-banner ul").css("width",len*liWidth);
+						$(".yy-left").click(function(){
+							index--;
+							if(index==-1){
+								index=len-1;
+							}
+							$(".yy-sjfa-banner ul").animate({"left":-index*liWidth},600);
+						})
+						$(".yy-right").click(function(){
+							index++;
+							if(index==len){
+								index=0;
+							}
+							$(".yy-sjfa-banner ul").animate({"left":-index*liWidth},600);
+						})
+					}
+					function yy_banner2(index){
+
+						len=$(".yy-sc-banner ul li").length;
+						liWidth=$(".yy-sc-banner ul li").outerWidth(true);
+						$(".yy-sc-banner ul").css("width",len*liWidth);
+						$(".yy-left").click(function(){
+							index--;
+							if(index==-1){
+								index=len-1;
+							}
+							$(".yy-sc-banner ul").animate({"left":-index*liWidth},600);
+						})
+						$(".yy-right").click(function(){
+							index++;
+							if(index==len){
+								index=0;
+							}
+							$(".yy-sc-banner ul").animate({"left":-index*liWidth},600);
+						})
+					}
+				})
+			</script>
+
+
+
+
+
+
+
+
+
+		<!--登录-->
+			<section class="loginbar">
+				<div class="loginbar_left">
+					<div class="loginbar_left1"><img src="${themepath}images/fflogo.png"/></div>
+					<div class="loginbar_left2"><a href="javascript:;">使用以下账号直接登录</a></div>
+					<div class="loginbar_left3">
+						<a href="javascript:;"><img src="${themepath}images/loginbar_01.png"/></a>
+						<a href="javascript:;"><img style="margin:0 11px;" src="${themepath}images/loginbar_03.png"/></a>
+						<a href="javascript:;"><img src="${themepath}images/loginbar_05.png"/></a>
+					</div>
+					<div class="loginbar_left4">你还没有注册？<a href="javascript:;"class="zc">立即注册</div>
+				</div>
+				<div class="loginbar_right">
+					<a href="javascript:;" class="shut" style="margin:10px 10px;"></a>
+					<div style="width: 300px;">		
+						<strong>登录</strong>
+						<div class="inp"><input type="text" name="user" id="user" placeholder="请输入登录邮箱" /></div>
+						<div class="inp"><input type="password" name="pass" id="Password1" placeholder="请输入密码" /></div>
+						<div class="check">
+							<div class="check_left fl"><input type="checkbox" name="ji" id="jizhu" checked="checked"/><label for="jizhu">记住我</label></div>
+							<div class="check_right fr"><a href="javascript:;">忘记密码?</div>
+							<div class="clear"></div>
+						</div>
+						<div><button class="bottom" id="Login">登录</button></div>	
+					</div>
+				</div>
+			</section>
+		<!--end-->
+
+
+
+
+
+
+		<!--个人中心-->
+			<script>
+				$(function(){
+					$(".ge_bottom ul li").click(function(){
+						var index=$(".ge_bottom ul li").index(this);
+						$(".yy1").eq(index).css("display","block").siblings(".yy1").css("display","none");
+					})
+					$(".yy-tx").on("click",function(){
+						$(".yonghuzhongxin").css("display","block");
+					})
+					$(".yh_shut").click(function(){
+						$(".yonghuzhongxin").css("display","none");
+					})
+				})
+			</script>
+
+			<section class="yonghuzhongxin" style="display: none;height: 360px;">
+				<div class="loginbar_left" style="height: 360px;">
+					<div class="loginbar_left1" style="padding-bottom:10px;"><img src="${themepath}images/fflogo.png"/></div>
+					<div class="qiandao">
+						<div class="qiandao_l fl">
+							<div class="fl qin_ll">
+								<a href="javascript:;">签到</a>
+							</div>
+							<div class="fl qin_rr">
+								<p style="color: #ced0d0;font-size: 12px;">DAY</p>
+								<p><a href="javascript:;" style="color: #00c5e8;">10</a></p>
+							</div>
+						</div>
+						
+						<div class="fr qin_r">
+							<a href="javascript:;"><img id="UserPic" src="${themepath}images/youx.png"/></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="ge_bottom">
+						<ul>
+							<li>
+								<div class="fl">
+									<img src="${themepath}images/yonghu.png"/>
+								</div>
+								<div class="fl renw_zh">
+									<a href="javascript:;" style="color: #fff;"id="UserName2"></a>
+									<p style="color: #fff;">河狸币：<span id="Userqian"></span></p>
+								</div>
+								<div class="clear"></div>
+							</li>
+							<li class="wj-li">
+								我家的设计方案
+							</li>
+							<li class="wj-li">我的收藏</li>
+							<li class="wj-li">充值记录</li>
+							<li class="wj-li">下载记录</li>
+							<li class="wj-li"><a href="/hdhlb.aspx">获得河狸币</a></li>
+						</ul>
+					</div>
+				</div>
+
+			
+
+				
+				
+
+				
+				<div class="yy1 loginbar_right" style="padding-left: 0;">
+					<a href="javascript:;" class="yh_shut" style="margin:5px 15px 0 0;"></a>
+					<div class="wans">
+						<div class="fl ws1"><a href="javascript:;">完善资料</a></div>
+						 <!--<div class="fr ws2"><a href="javascript:;">完善得币</a></div>-->
+						<div class="clear"></div>
+					</div>
+					<div class="shangchuan">
+                        <!--上传-->
+                        <script type="text/javascript" language="javascript">
+                            $(function () {
+                                $('#fileUp').change(function () {
+                                    $('#formFile').submit();
+                                });
+                            })
+                            function uploadSuccess(msg) {
+                                $("#Pic").val(msg);
+                            }
+                            function UPimage() {
+                                return $("#fileUp").click();
+                            }
+                        </script>
+						<div class="fl" style="margin-right:10px;"><a href="javascript:UPimage();"><img src="${themepath}images/shangc.jpg"/></a></div>
+                        <form id='formFile' name='formFile' method="post" action="/Page/Ajax.aspx?action=UploadFile" target='frameFile' enctype="multipart/form-data"style='display: none;'>
+                        <input type='file' id='fileUp' name='fileUp' />
+                        </form>
+                        <iframe id='frameFile' name='frameFile' style='display: none;'></iframe>
+                        <input type="hidden" name="Pic" id="Pic">
+                        <!--上传end-->
+						<div class="fl"><img src="${themepath}images/use.jpg"/></div>
+						<div class="clear"></div>
+					</div>
+					<div class="qianm">
+						<label for="qianm" id="user_qianm">个性签名：</label><br />
+						<textarea name="PersonalSignature" id="qianm">
+						</textarea>
+					</div>
+					<div class="qianm">
+						<div style="margin-bottom:7px;">
+							<div class="fl">
+								<label for="username" class="usern"><span style="letter-spacing: 20px;">昵</span>称：</label>
+								<input type="text" name="NickName" id="username" />
+							</div>
+							<div class="fr">
+								<label for="xingbie" class="usern"><span style="letter-spacing: 20px;">性</span>别：</label>
+								<input type="text" name="Sex" id="xingbie" />
+							</div>
+
+							<div class="clear"></div>
+						</div>
+						<div>
+							<label for="suozaidi" class="usern" style="letter-spacing: 4px;">所在地:</label>
+							<input type="text" name="address"  id="suozaidi"/>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div style="margin: 0 auto;width:363px;"><input type="button" id="userbott" value="保存" /></div>
+				</div>
+				<!--1-->
+					<div class="yy1 loginbar_right" style="padding-left: 0;">
+					<a href="javascript:;" class="yh_shut" style="margin:5px 15px 0 0;"></a>
+					<div class="wans" style="border-bottom: 1px solid #efefef;margin-bottom: 15px;">
+						<div class="fl ws1"><a href="javascript:;">我家的设计方案</a></div>
+						 <!--<div class="fr ws2"><a href="javascript:;">完善得币</a></div>-->
+						
+						<div class="clear"></div>
+					</div>
+					<div class="yy-sjfa-banner">
+						<ul>
+							<!--<li>
+								<img src="${themepath}images/sj-img_03.jpg" alt="">
+								<h1>新古典风格餐厅</h1>
+								<span>参考造价：740/㎡</span>
+							</li>-->
+							<div class="clear"></div>
+						</ul>
+						<div class="YY-RL yy-left"><img src="${themepath}images/yy-rl_03.png" alt=""></div>
+						<div class="YY-RL yy-right"><img src="${themepath}images/yy-rl_06.png" alt=""></div>
+					</div>
+				</div>
+				<!--2-->
+			
+				<div class="yy1 loginbar_right" style="padding-left: 0;">
+					<a href="javascript:;" class="yh_shut" style="margin:5px 15px 0 0;"></a>
+					<div class="wans" style="border-bottom: 1px solid #efefef;margin-bottom: 15px;">
+						<div class="fl ws1"><a href="javascript:;">我的收藏</a></div>
+						 <!--<div class="fr ws2"><a href="javascript:;">完善得币</a></div>-->
+						
+						<div class="clear"></div>
+					</div>
+					<div class="yy-sc-banner">
+						<ul>
+							<!--<li>
+								<img src="${themepath}images/sj-img_03.jpg" alt="">
+								<h1>新古典风格餐厅</h1>
+								<span>参考造价：740/㎡</span>
+								<div class="yy-qxsc"><img src="${themepath}images/qxsc_03.png" alt=""></div>
+							</li>-->
+							<div class="clear"></div>
+						</ul>
+						<div class="YY-RL yy-left"><img src="${themepath}images/yy-rl_03.png" alt=""></div>
+						<div class="YY-RL yy-right"><img src="${themepath}images/yy-rl_06.png" alt=""></div>
+					</div>
+				</div>
+			
+				<!--4-->
+				<div class="yy1 loginbar_right" style="padding-left: 0;">
+					<a href="javascript:;" class="yh_shut" style="margin:5px 15px 0 0;"></a>
+					<div class="wans">
+						<div class="fl ws1"><a href="javascript:;">充值记录</a></div>
+						 <!--<div class="fr ws2"><a href="javascript:;">完善得币</a></div>-->
+						<div class="clear"></div>
+					</div>
+					<div class="dd-tit">
+						<span>订单/河狸币</span>
+						<span class="fr">日期/金额</span>
+						<div class="clear"></div>
+					</div>
+					<div class="dingdan-li">
+						<ul>
+						<!--	<li>
+								<a href="javascript:;">
+									<div class="fl dt-hlb">
+										<p>1503089830022831</p>
+										<span>河狸币余额：500.00</span>
+									</div>
+									<div class="fr dt-sj">
+										<p>2016-10-26</p>
+										<span>+500.00</span>
+									</div>
+									<div class="clear"></div>
+								</a>
+							</li>-->
+						</ul>
+					</div>
+					<a class="dd-zxczzh" href="/hdhlb.aspx">在线充值</a>
+				</div>
+				<!--5-->
+				<div class="yy1 loginbar_right" style="padding-left: 0;">
+					<a href="javascript:;" class="yh_shut" style="margin:5px 15px 0 0;"></a>
+					<div class="wans">
+						<div class="fl ws1"><a href="javascript:;">下载记录</a></div>
+						 <!--<div class="fr ws2"><a href="javascript:;">完善得币</a></div>-->
+						<div class="clear"></div>
+					</div>
+					<div class="dd-tit">
+						<span>详情</span>
+						<span class="fr">日期/扣币</span>
+						<div class="clear"></div>
+					</div>
+					<div class="yy-xzjl-li">
+						<ul>
+						<!--	<li>
+								<a href="javascript:;">
+									<div class="fl yy-xzjl-li-fl">
+										<div class="fl" style="padding-right: 10px;">
+											<img src="${themepath}images/ssss_03.jpg" alt="">
+										</div>
+										<div class="fl">
+											<h1>新古典风格餐厅</h1>
+											<span>参考造价：740/㎡</span>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="fr yy-xzjl-li-fr">
+										<span>2016-10-26</span>
+										<h2>+500.00</h2>
+									</div>
+									<div class="clear"></div>
+								</a>
+							</li>-->
+							
+						</ul>
+					</div>
+					<a class="dd-zxczzh" href="/ct.aspx">在线设计</a>
+				
+					
+				</div>
+				<!--6-->
+
+
+
+
+
+			</section>
+		<!--end-->
+
+
+
+
+<script>
+
+    (function () {
+        if (c.cookie("UserCookie")) {
+            var _cookies = new Array();
+            _cookies = c.cookie("UserCookie").split(',');
+            $("#UserPic").val(_cookies[4]);
+            $("#UserName2").val(_cookies[0]);
+            $("#Userqian").val(_cookies[5]);
+            $("#qianm").html(_cookies[3]);
+            $("#username").val(_cookies[6]);
+            $("#xingbie").val(_cookies[3]);
+            $("#suozaidi").val(_cookies[7]);
+			$("#dlstyle").show();
+			$("#UserNickName").html(_cookies[0]);
+			$("#dltouxiang").attr("src",_cookies[4]);
+        }
+    })();
+    var SeveCheck = true;
+    $("#userbott").on("click", function() {
+        if (SeveCheck) {
+            SeveCheck = false;
+            jQuery.ajax({
+                type: 'get',
+                url: '/Page/Ajax.aspx',
+                data: {
+                    action: "UpdateUser",
+                    Pic: $("#Pic").val(),
+                    PersonalSignature: $("#qianm").html(),
+                    NickName: $("#username").val(),
+                    Sex: $("#xingbie").val(),
+                    address: $("#suozaidi").val()
+                },
+                success: function (data) {
+                    SeveCheck = true;
+                    alert(data);
+                },
+                error: function (XMLHttpRequest) {
+                    alert("系统维护登录失败");
+                    SeveCheck = true;
+                    console.info(XMLHttpRequest.readyState);
+                    console.info(XMLHttpRequest.status);
+                }
+            });
+        }
+    });
+    var SignUpCheck = true;
+    $("#SignUp").on("click", function () {
+		if($("#upc").val().length <=0){
+			alert("请输入用户名");
+			SignUpCheck=false;
+		}else{
+			SignUpCheck = true;
+		}
+		if($("#pass").val().length <=0){
+			alert("请输入密码");
+			SignUpCheck=false;
+		}else{
+			SignUpCheck = true;
+		}
+		if($("#yzm").val().length <=0){
+			alert("请输入验证码");
+			SignUpCheck=false;
+		}else{
+			SignUpCheck = true;
+		}
+        if (SignUpCheck) {
+            SignUpCheck = false;
+            jQuery.ajax({
+                type: 'get',
+                url: '/Page/Ajax.aspx',
+                data: {
+                    action: "SignUp",
+                    Title: $("#upc").val(),
+                    Password: $("#pass").val(),
+                    yzm: $("#yzm").val()
+                },
+                success: function (data) {
+                    SignUpCheck = true;
+					alert(data);
+                },
+                error: function (XMLHttpRequest) {
+                    alert("系统维护登录失败");
+                    $("#ajaxyzm").click();
+                    SignUpCheck = true;
+                    console.info(XMLHttpRequest.readyState);
+                    console.info(XMLHttpRequest.status);
+                }
+            });
+        }
+    });
+    var LoginCheck = true;
+    $("#Login").on("click", function () {
+	if($("#user").val().length <=0){
+			alert("请输入用户名");
+			LoginCheck=false;
+		}else{
+			LoginCheck = true;
+		}
+		if($("#Password1").val().length <=0){
+			alert("请输入密码");
+			LoginCheck=false;
+		}else{
+			LoginCheck = true;
+		}
+        if (LoginCheck) {
+            LoginCheck = false;
+            jQuery.ajax({
+                type: 'get',
+                url: '/Page/Ajax.aspx',
+                data: {
+                    action: "Login",
+                    Title: $("#user").val(),
+                    Password: $("#Password1").val()
+                },
+                success: function (data) {
+                    LoginCheck = true;
+                    alert(data);
+                },
+                error: function (XMLHttpRequest) {
+                    alert("系统维护登录失败");
+                    LoginCheck = true;
+                    console.info(XMLHttpRequest.readyState);
+                    console.info(XMLHttpRequest.status);
+                }
+            });
+        }
+    });
+</script>

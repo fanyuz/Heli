@@ -1,0 +1,61 @@
+﻿<header class="header">
+			<div class="dl">
+				<div class="zhuc">
+					<div class="zhuca" style="display: block;">
+						<a href="#"></a>
+						<a href="javascript:;" class="deng">登录</a>
+						<a href="javascript:;" class="zc">注册</a>
+						<a href="javascript:;"></a>
+					</div>
+					<div class="zhuca" id='dlstyle' style="display: none;">
+						<a href="#"></a>
+						<a href="javascript:;" style="background: none;width: 80px" class="yy-tx"><img src="${themepath}images/header-top-img_03.png" id='dltouxiang' alt="" width="22px" height="22px">&nbsp;&nbsp;<span id='UserNickName'>1234....</span></a>
+						<a href="javascript:Exit();" class="yy-yx">退出</a>
+						<a href="javascript:;"></a>
+					</div>
+					<script>
+					function Exit(){
+						c.removeCookie("UserCookie");
+						location.href = "/";
+					 }
+					</script>
+				</div>
+
+			</div>
+			<section class="header_center">
+				<div class="header_center_left">
+					<div class="logo"><img src="${themepath}images/logo.png" alt="logo" /></div>
+					<div class="sheji">
+						<strong>手机云设计</strong>
+						<div>
+							<span class="ewm_hover fl"><a href="javascript:;"><img src="${themepath}images/ewm.jpg"/></a></span>
+							<span class="angle fl"><a href="javascript:;"></a></span>
+							<div class="ewm1"><img src="${themepath}images/ewm1.png" width="75px" height="75px"/></div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="header_center_right">
+					<nav>
+						<a href="/" class="nav_a1">首页</a>
+						<a href="/ybfa.aspx" class="nav_a2">样板方案</a>
+						<a href="/ct.aspx" class="nav_a3">云设计</a>
+						<a href="/zxb.aspx" class="nav_a4">装修帮</a>
+						<a href="/sjb.aspx" class="nav_a5" id="clear_border">设计邦</a>
+					</nav>
+					<div class="nav_left">
+						<div>
+							<strong style="color: #676767;">关注官方平台</strong>
+							<span>
+								<a href="javascript:;" class="weixin"><img src="${themepath}images/weixin2.jpg"/></a>
+								<a href="javascript:;"><img src="${themepath}images/xinlang.jpg"/></a>	
+							</span>
+						</div>
+						<a href="javasciprt:;" class="weixin_ewm"><img src="${themepath}images/ewm2.png" width="75px" height="75px"/></a>
+				  </div>
+				</div>
+			</section>
+			<aside class="bot_left">
+				<img src="${themepath}images/bot_left.png" alt="">
+			</aside>
+		</header>

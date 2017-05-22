@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+	</style>
+		<script type="text/javascript">
+			$(function(){
+				$(".display").hide();
+				$(".down").click(function(){
+					$(".show").toggle();
+					$(".display").toggle();
+				});
+				$(".ewm1").hide();
+				$(".ewm_hover").hover(function(){
+					$(".ewm1").toggle();
+				});
+				$(".weixin_ewm").hide();
+				$(".weixin").hover(function(){
+					$(".weixin_ewm").toggle();
+				});
+				$(".gnjs_yuan a").eq(0).css("border-color","#3caec3").siblings().css("border-color","#c0c0c0");
+				$(".gnjs_yuan a").hover(function(){
+					$(this).css("border-color","#3caec3").siblings().css("border-color","#c0c0c0");
+				});
+				
+				
+				
+				$(".hqlb_strong a").hover(function(){
+					$(".hqlb_strong a").css("border-color","#c0c0c0");
+					$(this).css("border-color","#3caec3").siblings().css("border-color","#c0c0c0");
+				});
+
+
+
+
+
+
+
+
+
+				$(".helibi_a1 a").eq(0).css("color","#3cd2eb").siblings().css("color","#000");
+				$(".helibi_a1 a").click(function(){
+					$(this).css("color","#3cd2eb").siblings().css("color","#000");
+				});
+				$(".hqlb_ul li").eq(0).find("h2").css("color","#3cd2eb").siblings().css("color","#000");
+				$(".hqlb_ul li").click(function(){
+					$(".hqlb_ul li").find("h2").css("color","#000").siblings().css("color","#585858");
+					$(this).find("h2").css("color","#3cd2eb").siblings().css("color","#000");	
+				});
+				$(".nav_a2").css({"color":"#23c9e9","background":"url(images/nav_a2.png) no-repeat top center"});
+			});
+		</script>
+	<body>
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--功能介绍-content-->
+		<section class="flcm">
+			<div class="gn_bg">
+				<div style="width:1000px;margin: 0 auto;">
+					<div class="fl">
+						<h1>自主装修“设计师”专属货币</h1>
+						<ul>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>方案效果图</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>设计方案评估</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>装饰施工图</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>机电施工图</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>工程预算</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>设计答疑</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>施工指导</li>
+							<li><img src="${themepath}images/checked.png" class="gn_jj"/>自助装饰解决方案</li>
+						</ul>
+						<a class="hot" href="javascript:;">充值河狸狸币</a>
+					</div>
+					<div class="fr zh">
+						<div class="zh_green">河狸币的兑换</div>
+						<div class="midd">
+							电话：400-1023-100<br>
+							QQ：95802316
+						</div>
+						<div class="zh_bottom">
+							<a href="javascript:;">充值兑换遇到问题</a><br />
+							<a href="javascript:;">请联系</a><br/>
+							<a href="javascript:;">客服</a>
+						</div>
+						<div><a class="zh_kefu" href="javascript:;">在线客服</a></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="helibi">
+				<h2 class="fl">河狸币</h2>
+				<div class="helibi_a1">
+					<a href="javascript:;" class="fl">河狸币用途</a>
+					<a href="javascript:;" class="fl">在线充值兑换</a>
+					<a href="javascript:;" class="fl">免费获取</a>
+					<a href="javascript:;" class="fl">使用规则</a>
+					<a href="javascript:;" class="fl">邀请有礼</a>
+				</div>
+			</div>
+			<div class="flcm_top">
+				<h5>USE</h5>
+				<strong class="flcm_strong">河狸币的用途</strong>
+			</div>
+			<div style="text-align: center;"><a class="shengm" href="javascript:;">1元RMB=10个河狸币</a></div>
+		</section>
+		<section class="gnjs_banner">
+			<ul>
+				<li>
+					<p>1我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+					<p>我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+					<p>我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+				</li>
+				<li>
+					<p>2我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+					<p>我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+					<p>我们的优势我们的优势我们的优势我们的优势我们的优势我们的优势</p>
+				</li>
+			</ul>
+			<div class="gnjs_RL gnjs_left"><</div>
+			<div class="gnjs_RL gnjs_right">></div>
+		</section>
+		<!--end-->
+		<!--园-->
+		<section class="gnjs_yuan">
+			<a href="javascript:;" class="yuan gnjs_yuan1"></a>
+			<a href="javascript:;" class="yuan gnjs_yuan2"></a>
+			<a href="javascript:;" class="yuan gnjs_yuan3"></a>
+			<a href="javascript:;" class="yuan gnjs_yuan4"></a>
+			<div href="javascript:;" class="clear"></div>
+		</section>
+		<!--end-->
+		
+		<!--充值套餐-->
+		<div class="flcm_top">
+			<h5>ONLINE RECHARGE</h5>
+			<strong class="flcm_strong">在线充值兑换</strong>
+		</div>
+		<div style="text-align: center;"><a class="shengm" href="javascript:;">充值套餐</a></div>
+		
+		<section class="chongzhi">
+			<div class="loginbar_left" style="float: left;">
+				<div class="loginbar_left1"><img src="${themepath}images/fflogo.png"/></div>
+				<div class="loginbar_left2"><a href="javascript:;">使用以下账号直接登录</a></div>
+				<div class="loginbar_left3">
+					<a href="javascript:;"><img src="${themepath}images/loginbar_01.png"/></a>
+					<a href="javascript:;"><img style="margin:0 11px;" src="${themepath}images/loginbar_03.png"/></a>
+					<a href="javascript:;"><img src="${themepath}images/loginbar_05.png"/></a>
+				</div>
+				<div class="loginbar_left4">你还没有注册？<a href="javascript:;">立即注册</a></div>		
+			</div>
+			<div class="loginbar_right hqlb_cz">
+				<ul class="hqlb_ul yy-hqhlbbb">
+					<li>
+						<h2>yen10</h2>
+						<p>兑换100河狸币</p>
+					</li>
+					<li>
+						<h2>yen50</h2>
+						<p>兑换600河狸币</p>
+					</li>
+					<li>
+						<h2>yen100</h2>
+						<p>兑换1300河狸币</p>
+					</li>
+					<li>
+						<h2>yen500</h2>
+						<p>兑换7000河狸币</p>
+					</li>
+					<li>
+						<h2>yen1000</h2>
+						<p>兑换15000河狸币</p>
+					</li>
+					<li>
+						<h2>yen2000</h2>
+						<p>无限量</p>
+					</li>
+				</ul>
+				<a href="javascript:;" class="bottom hqlb_cj">支付宝充值</a>
+			</div>
+		</section>
+		<div style="width: 662px;margin: 0 auto 80px;font-size:14px;">注意：用户充值，24小时内实时到账，充值成功后可在会员中心查看河狸币数量。</div>
+		<!--end-->		
+		<!--content-->
+		<div class="flcm_top">
+			<h5>FREE ACCESS</h5>
+			<strong class="flcm_strong">免费获取河狸币</strong>
+		</div>
+		<div style="text-align: center;margin-bottom: 20px;"><a class="shengm" href="javascript:;">挖币</a></div>
+		<section class="gnjs_content">
+			<div class="gnjs_content1">
+				<img src="${themepath}images/con_07.png" align="right" style="padding-right: 20px;"/>
+				<div style="padding-top:80px;">
+					<h3>二、选择户型</h3>
+					<p>家俱厂商合作家俱厂商合作家俱厂商合作商合作商合作家</p>
+					<p>家俱厂商合作家俱厂商合作家俱厂商合作商合作商合作家</p>
+					<p>家俱厂商合作家俱厂</p>
+					<p>家俱厂商合作家俱厂商合作家俱厂商合作商合作商家家家</p>
+					<p>家俱厂商合作家俱厂商合作家俱厂商合作商合作商家家家</p>
+					<p>家俱厂商合作家俱厂商合作家俱厂商合作商合作商合作</p>
+				</div>
+			</div>
+		</section>
+		<!--end-->
+		<!--免费获取河狸币-->
+		<div class="flcm_top">
+			<h5>PAY DOWNLOAD</h5>
+			<strong class="flcm_strong">河狸币使用规则</strong>
+		</div>
+		<div style="text-align: center;margin-bottom: 20px;"><a class="shengm" href="javascript:;">下载扣币</a></div>
+		<section class="gnjs_yuan" style="margin:0 auto 40px;">
+			<div class="hqlb_strong">
+				<a href="javascript:;" class="yuan gnjs_yuan1"></a>
+				<div class="clear"></div>
+				<h4>方案设计</h4>
+				<strong>免费</strong>
+			</div>
+			<div class="hqlb_strong" style="margin:0 24px;">
+				<a href="javascript:;" class="yuan gnjs_yuan2" style="margin: 0;"></a>
+				<div class="clear"></div>
+				<h4>方案设计</h4>
+				<strong>免费</strong>
+			</div>
+			<div class="hqlb_strong" style="margin-right:24px;">
+				<a href="javascript:;" class="yuan gnjs_yuan3" style="margin-right:0;"></a>
+				<div class="clear"></div>
+				<h4>方案设计</h4>
+				<strong>免费</strong>
+			</div>
+			<div class="hqlb_strong">
+				<a href="javascript:;" class="yuan gnjs_yuan4"></a>
+				<div class="clear"></div>
+				<h4>方案设计</h4>
+				<strong>免费</strong>
+			</div>
+			<div href="javascript:;" class="clear"></div>
+		</section>
+		<section class="gnjs_yuan gnjs_yuanb">
+			<div class="hqlb_strong">
+				<a href="javascript:;" class="yuan gnjs_yuan1"></a>
+				<div class="clear"></div>
+				<h4>方案效果图</h4>
+				<strong>50币</strong>
+			</div>
+			<div class="hqlb_strong" style="margin:0 24px;">
+				<a href="javascript:;" class="yuan gnjs_yuan2" style="margin: 0;"></a>
+				<div class="clear"></div>
+				<h4>方案效果图</h4>
+				<strong>50币</strong>
+			</div>
+			<div class="hqlb_strong">
+				<a href="javascript:;" class="yuan gnjs_yuan3"></a>
+				<div class="clear"></div>
+				<h4>方案效果图</h4>
+				<strong>50币</strong>
+			</div>
+			<div href="javascript:;" class="clear"></div>
+		</section>
+		<!--end-->
+		<!--邀请有理-->
+		<div class="flcm_top">
+			<h5>LNVITATION</h5>
+			<strong class="flcm_strong">邀请有礼</strong>
+		</div>
+		<div style="text-align: center;margin-bottom: 20px;"><a class="shengm" href="javascript:;">邀请方式</a></div>
+		<section class="chongzhi">
+			<div class="loginbar_left">
+				<div class="loginbar_left1"><img src="${themepath}images/fflogo.png"/></div>
+				<div class="loginbar_left2"><a href="javascript:;" style="color:#fff;">邀请好友享VIP特权</a></div>	
+			</div>
+			<div class="loginbar_right" style="padding-top:40px;">
+				<div class="shangc"/><img src="${themepath}images/shangc.png"/></div>
+				<textarea name="sc" style="width:365px;margin-bottom:20px;">
+				
+				</textarea>
+				<div><button class="bottom" style="color:#fff;font-family: '黑体';">复制链接</button></div>
+			</div>
+			<div class="clear"></div>
+		</section>
+		<!--end-->
+		<!--footer-->
+		<section style="width: 100%;background:#EAEAEA;margin-top:100px;">
+		<!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+				<!--end-->
+	
+	
+	</section>
+	<!--end-->
+	</body>
+</html>
+

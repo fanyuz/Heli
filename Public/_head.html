@@ -1,0 +1,58 @@
+﻿<head>
+		<meta charset="UTF-8">
+		<title>${sitename}</title>
+		<link rel="stylesheet" type="text/css" href="${themepath}css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="${themepath}css/index.css"/>
+		<script src="${themepath}js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="${themepath}js/gy_ul.js" type="text/javascript" charset="utf-8"></script>
+		<script src="${themepath}js/RCC.js" type="text/javascript" charset="utf-8"></script>
+		<script src="${themepath}js/regsiter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="${themepath}js/yun_js.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<script type="text/javascript">
+			$(function(){
+				$(".display").hide();
+				$(".down").click(function(){
+					$(".show").toggle();
+					$(".display").toggle();
+				});
+				$(".ewm1").hide();
+				$(".ewm_hover").hover(function(){
+					$(".ewm1").toggle();
+				});
+				$(".weixin_ewm").hide();
+				$(".weixin").hover(function(){
+					$(".weixin_ewm").toggle();
+				});
+				$("..yb_sx>div").click(function(){
+					$(this).css({"background":"red","border":"1px solid red","color":"#fff"}).siblings("div").css({"background":"#fff","border":"1px solid #cccccc","color":"#000"});
+				});
+				$(".yb_pagge>div").click(function(){
+					$(this).css({"background":"#fff","color":"#aaaaaa"}).siblings().css({"background":"none","color":"#cccccc"});
+					$(this).find("a").css("color","#aaaaaa").siblings("a").css("color","#cccccc")
+				});
+				$(".zan").click(function(){
+					$(this).css("background","url(/themes/default/Public/images/zan_hover.png) no-repeat");
+//					$(".zan_len").css("color","red");
+				});
+				$(".no").click(function(){
+					$(this).css("background","url(/themes/default/Public/images/no_hover.png) no-repeat");
+//					$(".no_len").css("color","red");
+				});
+				$(".fenx").click(function(){
+					$(this).css("background","url(/themes/default/Public/images/fenx_hover.png) no-repeat");
+//					$(".fenx_len").css("color","red").;
+				});
+				
+				$(".fg_a>li>a").click(function(){
+					$(".fg_a>li>a").css("color","#646464");
+					$(this).css("color","#78b432");
+				});
+				$(".zj_a>li>a").click(function(){
+					$(".zj_a>li>a").css("color","#646464");
+					$(this).css("color","#78b432");
+				});
+			
+			});
+		</script>

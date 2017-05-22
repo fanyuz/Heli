@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	 #parse("../Public/_head.html") 
+	 
+	<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+	</style>
+	<script>
+		$(function(){
+			$(".nav_a2").css({"color":"#23c9e9","background":"url(/themes/default/Public/images/nav_a2.png) no-repeat top center"});
+			})
+	</script>
+	<body>
+
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--banner-->
+		<div class="yb_banner">
+			<div class="yb_banner_wz">
+				<div style="width: 567px;">
+					<h1>北京简尚装饰设计有限公司</h1>
+					<p>是一直只专注室内装饰设计与工程施工并提供精装一体化整体配套服务的专业精装公司以“精”字为理念核心</p>
+				</div>
+			</div>
+		</div>
+		<!--end-->
+		
+		<!--content-->
+		<div class="yb_content" style="margin-bottom: 30px;">
+			<!-- <div class="yb_fasx">样板设计方案筛选</div>
+			<div class="yb_kg">
+				<span class="fl">空间</span>
+				<div class="yun_right_ul yb_ul ybfa-kj">
+					 <ul class="gy_ul">
+					#foreach($item in ${Helper.GetChannelList(6,18,-1,-1,"[index]")})
+							<li class="right_ul_1">
+								<img src="$item.TitleImage"/>
+								
+							</li>
+						#end
+						<div class="clear"></div>
+					</ul>
+				</div>
+			</div>
+
+			<style>
+				.ybfa-kj ul li img{width: 100%;height: 100%;}
+			</style>
+			
+
+			<div class="yb_zj">
+				<span class="fl">造价</span>
+				<div class="zj_ul">
+					<a href="javascript:;" class="fl">全部</a>
+					<ul class="zj_a">
+					
+					#foreach($item in ${Helper.GetArticleList(-1,29,-1)})
+						<li><a href="/ybfa.aspx?shang=$item.shang&xia=$item.xia">${item.shang}-${item.xia}/m^2</a></li>
+					#end
+						<li>
+							<div class="fl "><input type="text" class="yb_ul_box" /></div><div class="fl" style="color:#cccccc;margin:0 3px;">-</div><div class="fl"><input type="text" class="yb_ul_box" /></div><input type="button" class="fr yb_ul_bottom" value="确定" />
+						</li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="yb_fg">
+				<span class="fl">风格</span>
+				<div class="zj_ul">
+					<a href="javascript:;" class="fl">全部</a>
+					<ul class="fg_a">
+					#foreach($item in ${Helper.GetArticleList(-1,30,-1)})
+						<li><a href="/ybfa.aspx?style=$item.title">$item.title</a></li>
+					#end
+						<div class="clear"></div>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="yb_fasx">
+				<div class="yb_sx fl">
+					<div>价格</div>
+					<div>人气</div>
+					<div>上架时间</div>
+					<div class="clear" style="border: none;"></div>
+				</div>
+				<div class="fl">
+					<input type="text" name="name" id="name" value="在结果中搜索"/><input class="yb_button" type="button" value="确 定" />
+				</div>
+				<div class="fr yb_page">
+					<div class="yb_pagge">
+                        #set($shang =(${page} - 1))
+                        #set($xia = (${page} + 1))
+						<div><a  href="/${Channel.Alias}/page/${shang}.aspx"><</a></div>
+						<div><a  href="/${Channel.Alias}/page/${xia}.aspx">></a></div>
+					</div>
+				</div>
+			</div> -->
+			<div class="ybsx">
+				<div class="ybsx_left">
+					<div class="kyg"><span><h1>看图购</h1><h2>精选美图家的灵感</h2></span></div>
+					<div class="hlzx"><img src="${themepath}images/hlzx.jpg" alt="" width="244" height="120"></div>
+				</div>
+				<div class="ybsx_center">
+					<div class="ybsx_kj">
+						<div class="yb_kg">
+							<span class="fl">空间</span>
+							<div class="yun_right_ul yb_ul ybfa-kj">
+								 <ul class="gy_ul">
+								#foreach($item in ${Helper.GetChannelList(6,18,-1,-1,"[index]")})
+										<li class="right_ul_1">
+											<img src="$item.TitleImage"/>
+											
+										</li>
+									#end
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+
+						<style>
+							.ybfa-kj ul li img{width: 100%;height: 100%;}
+						</style>
+
+					</div>
+					<div class="clear"></div>
+					<div class="ybsx_fg">
+						<div class="yb_fg">
+							<span class="fl">风格</span>
+							<div class="zj_ul">
+								<a href="javascript:;" class="fl">全部</a>
+								<ul class="fg_a">
+								#foreach($item in ${Helper.GetArticleList(-1,30,-1)})
+									<li><a href="/ybfa.aspx?style=$item.title">$item.title</a></li>
+								#end
+									<div class="clear"></div>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ybsx_right"><a href="/ct.aspx"><img src="${themepath}images/xqx.jpg" alt=""></a></div>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="yb_middel">
+                <script>
+                   function shoucang(id) {
+                            jQuery.ajax({
+                                type: 'post',
+                                url: '/Page/Ajax.aspx',
+                                data: {
+                                    action: "UpdateCollection",
+                                    CollectionID: id
+                                },
+                                success: function (data) {
+                                    alert(data);
+                                },
+                                error: function (XMLHttpRequest) {
+                                    SeveCheck = true;
+                                    console.info(XMLHttpRequest.readyState);
+                                    console.info(XMLHttpRequest.status);
+                                }
+                            });
+                    }
+                </script>
+<!-- #set($i=1)
+#set($onepagesize=3)
+#set($dayu=(${page} - 1)*$onepagesize)
+#set($xiaoyu=${page}*$onepagesize)
+#set($xwzx=${Helper.GetQuery("select * from ( select row_number() over (order by [index] desc,[Created] desc) as rowNum,* from [Design] where cid='${Channel.ID}') as t where cid='${Channel.ID}' and rowNum>${dayu} and rowNum<=${xiaoyu} order by [index] desc,[Created] desc")})
+#foreach($item in $xwzx) -->
+				<!-- <div class="yb_middel_box" #if($i%2 ==0)  style="margin:81px 0;" #else style="margin-top:35px;" #end>
+					<div class="fl middel_box_l">
+						<div style="text-align: center;"><img src="$item.Pic"/></div>
+						<div class="middel_box_y"></div>
+					</div>
+					<div class="fr middel_box_r">
+						<div style="margin-bottom: 10px;margin-top:20px;">
+							<div class="fl">
+								<div class="user">$item.Title</div>
+								<div><div class="fl diqu">$item.yhdz</div><div class="fl shouc" onclick="shoucang($item.id)">收 藏</div><div class="clear"></div></div>
+							</div>
+							<div class="fr"><img src="$item.touxiang"/></div>
+							<div class="clear"></div>
+						</div>
+						<div style="margin-bottom: 24px;"><span class="yb_strong">$item.Name</span><span class="ckj">参考造价：￥${item.price}/m^2</span></div>
+						<div class="middel_p">
+							<p>$item.Description</p>
+						</div>
+						<div class="middel_bottom">
+							<span><a href="javascript:;" class="zan fl" style="margin-top:-4px;"></a><a class="fl zan_len" href="javascript:;">${item.Thumbsup}</a></span>
+							<span><a href="javascript:;" class="no fl"></a><a class="fl no_len" href="javascript:;">${item.Stepon}</a></span>
+							<span><a href="javascript:;" class="fenx fl"></a><a class="fl fenx_len" href="javascript:;">${item.shareit}</a></span>
+							<span class="clear"></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div> -->
+				<!--<div class="yb_middel_box" style="margin:81px 0;">
+					<div class="fr middel_box_l">
+						<div style="text-align: center;"><img src="${themepath}images/yb_content2.jpg"/></div>
+						<div class="middel_box_y"></div>
+					</div>
+					<div class="fl middel_box_r">
+						<div style="margin-bottom: 10px;margin-top:20px;">
+							<div class="fl" >
+								<div class="user">小蝴蝶</div>
+								<div><div class="fl diqu">北京市</div><div class="fl shouc">收 藏</div><div class="clear"></div></div>
+							</div>
+							<div class="fr"><img src="${themepath}images/images/yb_rw_03.jpg"/></div>
+							<div class="clear"></div>
+						</div>
+						<div style="margin-bottom: 24px;"><span class="yb_strong">新古典风格餐厅</span><span class="ckj">参考造价：￥740/m^2</span></div>
+						<div class="middel_p">
+							<p>我是个热爱生活的女孩，我的家我自已做主。女孩，我的家我自已做主。是个热爱生活的女孩，我的家我自已做主。女孩，我的家。</p>
+						</div>
+						<div class="middel_bottom fr">
+							<span><a href="javascript:;" class="zan fl" style="margin-top:-4px;"></a><a class="fl zan_len" href="javascript:;">281</a></span>
+							<span><a href="javascript:;" class="no fl"></a><a class="fl no_len" href="javascript:;">284</a></span>
+							<span><a href="javascript:;" class="fenx fl"></a><a class="fl fenx_len" href="javascript:;">4</a></span>
+							<span class="clear"></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>-->
+               <!--  #set($i= $i+1)
+				#end
+				<div style="text-align: center;margin:23px 0;"><img src="${themepath}images/botton.jpg"/></div> -->
+			
+			</div>
+		</div>
+		<!--end-->
+		
+
+		<!--瀑布流-->
+		
+
+
+		<style>
+			.middel_bottom{margin-top: 5px;margin-bottom: 15px;height: 40px;border-bottom: 1px solid #ccc;padding-top: 18px}
+			.box-nrms{border:1px solid #ccc;border-top: 0;padding: 0 5px;margin-top: -6px; margin-bottom: 20px;}
+			.box-nrms p{font-size: 12px;color: #999999;padding-bottom: 8px;}
+			.box-nrms h1{font-size: 14px;text-align: center;line-height: 50px;}
+			
+			.ybfa-img-alert{position: fixed;width: 100%;height: 100%;background: #fff;z-index: 999;display: none;box-sizing:border-box;left: 0;/*margin-top: -480px;*/ background: rgba(0,0,0,0.7); top: 0;}
+			.ybfa-img-alert>div{position: relative;width: 800px; height: 565px;padding: 35px 40px; background: #fff; top: 50%; left: 50%; margin-top: -282.5px; margin-left: -440px;}
+			.ybfa-img-alert>div>a{position: absolute;right: 20px;top: 20px;z-index: 57}
+			.ybfa-img-alert>div>img{width: 800px;height: 565px;position: absolute;}
+		</style>
+		<script>
+			$(function(){
+				
+				$(".ybfa-img-alert>div>a").click(function(){
+					$(".ybfa-img-alert").css("display","none");
+					
+				})
+
+				$(".box").click(function(){
+					
+					imgAttr=$(this).find(".container-box-content img").attr("src");
+					$(".ybfa-img-alert>div>img").attr("src",imgAttr);
+					$("div[data-index='" + $(this).attr("data-index") + "']", ".ybfa-img-alert").css("display", "block");
+					$(".ybfa-img-alert").css("display", "block");
+				})
+
+			})
+		</script>
+		<div class="ybfa-img-alert">
+             #set($i=1)
+#set($onepagesize=3)
+#set($dayu=(${page} - 1)*$onepagesize)
+#set($xiaoyu=${page}*$onepagesize)
+#set($xwzx=${Helper.GetQuery("select * from ( select row_number() over (order by [index] desc,[Created] desc) as rowNum,* from [Design] where cid='${Channel.ID}') as t where cid='${Channel.ID}' and rowNum>${dayu} and rowNum<=${xiaoyu} order by [index] desc,[Created] desc")})
+#foreach($item in $xwzx)
+			<div data-index="$i" style="display:none;">
+				<a href="javascript:;"><img src="${themepath}images/dialog.png" alt=""></a>
+				<img src="$item.Pic" alt="">
+			</div>
+            $item.jiaobeng
+			#set($i= $i+1)
+				#end
+		</div>
+		<section class="baibg">
+		<section class="mtkz-pbl">
+			<div class="container">
+                #set($i=1)
+#set($onepagesize=3)
+#set($dayu=(${page} - 1)*$onepagesize)
+#set($xiaoyu=${page}*$onepagesize)
+#set($xwzx=${Helper.GetQuery("select * from ( select row_number() over (order by [index] desc,[Created] desc) as rowNum,* from [Design] where cid='${Channel.ID}') as t where cid='${Channel.ID}' and rowNum>${dayu} and rowNum<=${xiaoyu} order by [index] desc,[Created] desc")})
+#foreach($item in $xwzx)
+				<div class="box"data-index="$i">
+					<div class="container-box-content" >
+						<img src="$item.Pic"/>
+						<div class="box-nrms">
+							<!-- <div class="middel_bottom">
+								<span><a href="javascript:;" class="zan fl" style="margin-top:-4px;"></a><a class="fl zan_len" href="javascript:;">281</a></span>
+								<span><a href="javascript:;" class="no fl"></a><a class="fl no_len" href="javascript:;">284</a></span>
+								<span><a href="javascript:;" class="fenx fl"></a><a class="fl fenx_len" href="javascript:;">4</a></span>
+							</div> -->
+							<h1>$item.Name</h1>
+							<p>
+								$item.Description
+							</p>
+						</div>
+					</div>
+				</div>
+				#set($i= $i+1)
+				#end
+					<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+
+		</section>
+
+		</section>
+		
+
+
+		<!--end-->
+		
+		<!--footer-->
+		<section style="width: 100%;background:#EAEAEA;display: none;">
+		<!--foot--->
+                #parse("../Public/foot.html")   
+            <!--foot end-->
+			<!--end-->
+			<!--copyright-->
+				 #parse("../Public/Footer.html") 
+				<!--end-->
+	</section>
+	<!--end-->
+	</body>
+</html>
+

@@ -1,0 +1,107 @@
+@charset"utf-8";
+ 
+/* CSS Document */
+.page_1440 .head-right .item {
+    padding: 22px 12px 16px 0;
+}
+.page_1440 .header .nav .name {
+    padding: 0 12px;
+}
+
+.page_1440 .wrapper-setas{height:40px;position: relative;width:80px;float:right;}
+.page_1440 .wrapper-setas a{width: 23px; height: 23px;}
+.page_1440 .setaDir{ background:url(../images/zico_23.png) no-repeat;right:20px;top:10px;width: 23px;height: 23px;}
+.page_1440 .setaEsq{ background:url(../images/zico_26.png) no-repeat;left:0px;top:10px;width: 23px;height: 23px;}
+.page_1440 .setaDir:hover{ background:url(../images/zico_24.png) no-repeat;}
+.page_1440 .setaEsq:hover{ background:url(../images/zico_25.png) no-repeat;}
+.page_1440 .cc .secc .tags{margin-bottom: 40px;}
+.page_1440 .setaDir-2{ background:url(../images/zico_23.png) no-repeat;right:20px;top:-40px;width: 23px;height: 23px;}
+.page_1440 .setaEsq-2{ background:url(../images/zico_26.png) no-repeat;left:0px;top:-40px;width: 23px;height: 23px;}
+.page_1440 .setaDir-2:hover{ background:url(../images/zico_28.png) no-repeat;}
+.page_1440 .setaEsq-2:hover{ background:url(../images/zico_27.png) no-repeat;}
+.page_1440 .cc .listfc .f1{width: 50%;margin:0 auto;}
+.page_1440 .cc .listfc .f1 .cl{float:none;width: 100%;}
+.page_1440 .cc .listfc .f1 h2{font-size: 20px;}
+.page_1440 .cc .listfc .f1 .cr{width: 50%;margin:20px auto 20px auto;float:none;}
+.page_1440 .cc10 .prev{left:10px;}
+.page_1440 .cc10 .next{right:10px;}
+.page_1280 .index .col-4 {
+        width: 50%;
+}
+.page_1280 .index .box05 .bg,
+.page_1280 .index .box06 .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.page_1280 .index .box05 .item,
+.page_1280 .index .box06 .item{
+    position: relative;
+}
+.page_1280 .index .col-2 {
+    width: 33.33%;
+}
+.page_1280 .index .col-2.first a {
+    padding: 0 0 0 1px;
+}
+.page_1280 .index .row02 .box01 {
+    width: 100%;
+}
+.page_1280 .index .row02 .box02 {
+    width: 51.7%;
+}
+.page_1280 .index .row02 .box03 {
+    width: 48.3%;
+}
+.page_1280 .header .nav .name {
+    font-size: 13px;
+}
+.page_1280 .head-right .item {
+    padding: 18px 12px 10px 0;
+}
+
+/*鏂伴椈涓　績*/
+.page_1280 .news-page .img-list .box {
+    width: 31%;
+}
+
+/*绮惧搧闆嗚悆*/
+.page_1280 .treasury .img-list .box {
+    width: 23.7%;
+}
+/*鏂囧寲鐞嗗康*/
+.page_1280 #page4 .cont-box{
+    margin: 25px 0 0;
+}
+
+.page_1280 .focus-hot{display: none;}
+.page_1024 .header .nav .name {
+    font-size: 12px;
+}
+.page_1024 .header .head {
+    padding: 0 8px 0 2%;
+}
+
+/*鏂囧寲鐞嗗康*/
+.page_1024 .culture-page .ele_text {
+    left: 7.06%;
+    width: 85.88%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.page_1024 #page2 .item h3{
+    padding: 0 0 6px;
+}
+.page_1024 #page2 .item .more{
+    margin: 3% auto 0;
+}
+
+ /*鑱旂郴鎴戜滑*/
+.page_1024 .zmap .info{position: static;width: 92%;height:360px;padding: 20px 4% 20px 4%;}
+.page_1024 .zmap .info h2{margin-top: 0;font-size: 24px;}
+.page_1024 .zmap .info h3{font-size: 18px;}
+.page_1024 .zmap .info .info-t{width: 90%;}
+/*鍏氱兢澶╁湴*/
+.page_1024 .zarticle .secnav{width: 100%;padding: 15px 0px 0px;}
+.page_1024 .zarticle .secnav ul{width: 60%;margin:0 auto;}
+.page_1024 .zarticle .secnav ul li{width: 33%;padding:0;text-align: center;}

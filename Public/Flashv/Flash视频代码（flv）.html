@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> New Document </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+</head>
+
+<body>
+<div id="container"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</div>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+	var s1 = new SWFObject("jwplayer.swf","jwplayer","290","250","8");
+	s1.addParam("allowfullscreen","true");
+	s1.addVariable("autostart","true");
+	s1.addVariable("width","290");
+	s1.addVariable("height","250");
+	s1.addVariable("file","playlist.xml");
+	s1.addVariable("file","11.flv");
+	s1.addVariable("image","1.gif");
+	s1.write("container");
+</script>
+
+
+
+
+<div id="container"><a href="http://www.macromedia.com/go/getflashplayer">Get the Flash Player</a> to see this player.</div>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+	var s1 = new SWFObject("jwplayer.swf","jwplayer","290","250","8");
+	//						视 频 地 址	    参数	 宽度  高度 flash版本
+	s1.addParam("allowfullscreen","true");	//是否可以全屏
+	s1.addVariable("autostart","false");	//是否自动播放
+	s1.addVariable("width","290");	//视频宽度
+	s1.addVariable("height","250");	//视频高度
+	s1.addVariable("file","playlist.xml");	//列表播放
+	s1.addVariable("file","11.flv");	//单文件播放
+	s1.addVariable("image","1.gif");	//视频缩略图地址
+	s1.write("container");	//将播放器写入到container
+</script>
+</body>
+</html>
+

@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<body>
+		<style type="text/css">
+			svg{
+				width: 640px;
+				height: 800px;
+				display: block;
+				position: absolute;
+				top: 0px;left: 50%;
+				transform: translateX(-50%);
+				z-index: 87;
+			}
+			polygon{
+				fill: rgba(0,0,0,.0);
+				stroke: rgba(255,255,255,0.0);
+			}
+		</style>
+        <script type="text/javascript">
+            $(function () {
+
+
+
+                $(".nav_a3").css({ "color": "#23c9e9", "background": "url(/themes/default/Public/images/nav_a3_3.png) no-repeat top center" });
+
+
+
+                $(".display").hide();
+                $(".down").click(function () {
+                    $(".show").toggle();
+                    $(".display").toggle();
+                });
+                $(".ewm1").hide();
+                $(".ewm_hover").hover(function () {
+                    $(".ewm1").toggle();
+                });
+                $(".weixin_ewm").hide();
+                $(".weixin").hover(function () {
+                    $(".weixin_ewm").toggle();
+                });
+                $(".gnjs_yuan a").eq(0).css("border-color", "#3caec3").siblings().css("border-color", "#c0c0c0");
+                $(".gnjs_yuan a").hover(function () {
+                    $(this).css("border-color", "#3caec3").siblings().css("border-color", "#c0c0c0");
+                });
+                var zong_page = $(".ysj1_article_left>a").length;
+                $(".zong_page").text(zong_page);
+
+                var page = 0;
+
+
+
+
+
+
+
+
+                $(".yun_focus").eq(0).css("display", "block").siblings(".yun_focus").css("display", "none");
+
+
+
+
+
+
+
+                $(".yun_focus ul li").hover(function () {
+                    $(".yun_focus::before").css("display", "block");
+                });
+
+                $(".yun_focus ul li").click(function () {
+                    dd = $(this).find("img").attr("src");
+                    $(".fa").find("img").attr("src", dd);
+                    $(".fa").css("display", "block");
+                    $(".yun_focus").css("display", "none");
+                });
+                $(".fa>a").click(function () {
+                    $(".fa").css("display", "none");
+                    $(".yun_focus").eq(0).css("display", "block");
+
+                });
+
+
+                $(".fa").mouseover(function () {
+                    $(".er_fixed").css("display", "block");
+                    $(".er_fixed").mouseover(function () {
+                        $(this).css("display", "block");
+                    });
+                });
+                $(".fa").mouseout(function () {
+                    $(".er_fixed").css("display", "none");
+                    $(".er_fixed").mouseout(function () {
+                        $(this).css("display", "none");
+                    });
+                });
+
+
+                $(".yun_suod").click(function () {
+                    $(".ysj1_article_left").css("display", "none");
+                    $(".ysj1_page").css("display", "none");
+                    $(".yun_right").css("display", "none");
+                });
+
+                $(".select>ul>li").css("display", "none");
+                $(".select>a").click(function () {
+                    $(".select>ul>li").stop(false, true).slideToggle();
+                });
+
+             $(".select>ul>li").click(function () {
+                  
+                    $(".select>ul>li").css("display", "none");
+                });
+
+                $(".stur a").click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                });
+
+                $(".xia_stur").click(function () {
+                    $(".xiazai").css("display", "none");
+                });
+                $(".fen_stur").click(function () {
+                    $(".fenxiang").css("display", "none");
+                });
+
+
+
+                $(".er_fixed_gb").click(function () {
+
+                    $(".fa").css("display", "none");
+                    $(".er_fixed").css("display", "none");
+                    $(".yun_xuanx>a").eq(0).css("color", "#00c5e8").siblings().css("color", "#fff");
+                    $(".yun_focus").eq(0).css("display", "block").siblings(".yun_focus").css("display", "none");
+                });
+                $(".er_fixed>a").click(function () {
+                    $(".yun_fixed").css("display", "none");
+                });
+                $(".yun_suod").click(function () {
+                    $(this).find("img").attr("src", "${themepath}yun_images/suoding.png");
+                });
+
+
+                $(".gy_ul>li").click(function () {
+
+                    $(".yun_fixed").css("display", "block");
+                    $(".yun_xuanx>a").eq(0).css("color", "#00c5e8").siblings().css("color", "#fff");
+                });
+
+                $(".qita").click(function () {
+                    $(".yun_right_ul").toggle();
+                });
+                var index = 0;
+                var atricle_sqt_len = $(".atricle_sqt ul li").length;
+                var sgt_l = $(".sgt_l");
+                var sgt_r = $(".sgt_r");
+                $(".atricle_sqt ul li").eq(0).css("display", "block").siblings("li").css("display", "none");
+                sgt_r.click(function () {
+                    index++;
+                    if (index == atricle_sqt_len) {
+                        index = 0;
+                    };
+                    abc(index);
+                });
+                sgt_l.click(function () {
+                    index--;
+                    if (index == -1) {
+                        index = atricle_sqt_len - 1;
+                    };
+                    abc(index);
+                });
+                function abc(index) {
+                    $(".atricle_sqt ul li").eq(index).css("display", "block").siblings("li").css("display", "none");
+                };
+                $(".sgt_shut").click(function () {
+                    $(".section_sgt").css("display", "none");
+                });
+                $(".ping_bottom>a").eq(0).click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                    $(".section_sgt").css("display", "block");
+                });
+                $(".ping_bottom>a").eq(1).click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                    $(".xiazai").css("display", "block");
+                });
+            });
+
+	</script>
+		<!--alert施工图-->
+			<section class="section_sgt" style="display: none;">
+				<div style="position: relative;width:1346px;margin:0 auto;">
+				<article class="atricle_sqt">
+					<ul>
+				#foreach($item in ${Helper.GetArticleList(-1,25,-1)})
+						<li>
+							<div style="width:655px;margin: 14px auto; 17px">
+								<a href="javascript:;" class="fr"><img src="${themepath}images/shut.png"/></a>
+								<div class="clear"></div>
+							</div>
+							<div class="sgt_top">
+								<div class="fl"><img src="${themepath}images/sgt_logo.jpg"/></div>
+								<div class="fr">${Article.title}</div>
+								<div class="clear"></div>
+							</div>
+							<div class="focus_sqt">
+								<table width="1002" border="2" cellpadding="0" cellspacing="0">
+		                          <tr>
+		                            <td width="35" style="font-size:14px;text-align: center;">类别</td>
+		                            <td width="140
+		                            " style="font-size:12px;padding-left:17px;">${Article.Leibie}</td>
+		                            <td width="35" align="center" style="font-size:14px;">内容</td>
+		                            
+		                            <td width="339" style="font-size:12px;padding-left:17px;">${Article.Content}</td>
+		                            <td width="48" align="center" style="font-size:14px;">团结号</td>
+		                            <td width="65" align="center" style="font-size:12px;">${Article.TuanJie}</td>
+		                          </tr>
+		                          <tr>
+		                            <td colspan="2" align="center" style="font-size:14px;">参考图片</td>
+		                            <td colspan="4" align="center" style="font-size:14px;">施工图</td>
+		                          </tr>
+		                          <tr>
+		                            <td height="187" colspan="2"><img src="${Article.Pic}"></td>
+		                            <td colspan="4" rowspan="3"> <img src="${Article.Pics}" width="480" height="367"></td>
+		                          </tr>
+		                          <tr>
+		                            <td colspan="2" align="center" style="font-size:14px;">施工说明</td>
+		                          </tr>
+		                          <tr>
+		                            <td height="154" colspan="2" style="font-size:12px;line-height:25px;">${Article.Description}</td>
+		                          </tr>
+		                        </table>
+		
+							</div>
+							<div style="text-align: center;"><a href="javascript:;" style="font-size: 14px;color:#fff;">下载本方案完整施工图纸</a></div>
+						</li>
+					#end 
+					</ul>
+				</article>
+					<div class="sgt_RL sgt_l"></div>
+					<div class="sgt_RL sgt_r"></div>
+				</div>
+			</section>
+		
+		<!--end-->
+		<!--内容alert-->
+			<div class="neirong_alert" style="display: none;">
+				<div class="nr_alert nr_alert1">
+					
+				</div>
+				<div class="nr_alert nr_alert2">
+					2
+				</div>
+				<div class="nr_alert nr_alert3">
+					3
+				</div>
+				<div class="nr_alert nr_alert4">
+					4
+				</div>
+				<div class="nr_alert nr_alert5">
+					5
+				</div>
+				<div class="nr_alert nr_alert6">
+					6
+				</div>
+				<div class="nr_alert nr_alert7">
+					7
+				</div>
+				<div class="nr_alert nr_alert8">
+					8
+				</div>
+			</div>		
+			
+		<!--end-->
+		<!--fixed-->
+		#parse("../Public/fixed.html") 
+		<!--end-->
+		<!--评估-->
+		<div class="yun_pinggu">
+			<div class="stur fr"><a href="javascript:;"></a></div>
+			<div class="clear"></div>
+			<h2 class="ping_top">室内设计方案评估</h2>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">风<br />格</div>
+				<div class="ping_box_fr fl">轻钢龙骨石膏板欧式造型顶，墙面欧式风格壁纸饰面，皮革硬包背景墙，实木复合木地板地面，搭配欧式古典家俱。轻钢龙骨石膏板欧式造型顶，墙面欧式风格壁纸饰面，皮革硬包背景墙，实木复合木地板地面，搭配欧式古典家俱。</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">造<br />价</div>
+				<div class="ping_box_fr fl">
+					<strong class="box_strong">此设计方案的工程参考造价为 600元/㎡</strong>
+					<p>
+						注意：<br />
+						<p>1.一般工程所说的单方造价是指人工+材料+机械费用总和再折算成每平方的费用。</p>
+						<p>2.该造价不包含方案中所涉及的电器设备、家俱及配饰等，</p>
+						<p>3.该造价不包含拆除费用，不包含工程公司的规费、税费等。</p>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">工<br />程</div>
+				<div class="ping_box_fr fl">
+					<strong class="box_strong">施工图</strong>
+					<p>
+						的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的 要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的要性 施工图的必要性施工图的必要性施工图
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_bottom"><a href="javascript:;"><img src="${themepath}yun_images/jia.png" style="margin:-5px 5px 0 0;"/>查看施工图纸</a><a href="javascript:;">图纸下载</a></div>
+		</div>
+		<!--end-->
+		<!--下载管理-->
+		#parse("../Public/pinggu.html") 
+		<!--end-->
+		<!--分享-->
+		<div class="fenxiang">
+			<div class="fen_stur fr"><a href="javascript:;"></a></div>
+			<div class="clear"></div>
+			<h2 class="xia_top">分享</h2>
+			<div class="bj_fenx">
+				<ul>
+					<li class="border_top">
+						<!-- <div class="fenx_box fenx_box1"></div> -->
+						<!-- JiaThis Button BEGIN -->
+							<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+								<a class="jiathis_button_qzone"></a>
+							</div>
+							<div class="clear"></div>
+							<script type="text/javascript" >
+							var jiathis_config={
+								siteNum:1,
+								sm:"qzone",
+								summary:"",
+								shortUrl:false,
+								hideMore:false
+							}
+							</script>
+							<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+							<!-- JiaThis Button END -->
+
+						<p>QQ空间</p>
+					</li>
+					<li class="border_top">
+						<div class="fenx_box fenx_box2"></div>
+						<p>分享到设计邦</p>
+					</li>
+					<li class="border_top">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+							<a class="jiathis_button_weixin"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:true,
+							hideMore:true
+						}
+						</script>
+						
+						<!-- JiaThis Button END -->
+
+						<p>微信好友</p>
+					</li>
+					<li class="border_bottom">
+						<div class="fenx_box fenx_box4"></div>
+						<p>朋友圈</p>
+					</li>
+					<li class="border_bottom">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+						<a class="jiathis_button_tqq"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:false,
+							hideMore:true
+						}
+						</script>
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+						<!-- JiaThis Button END -->
+
+						<p>腾讯微博</p>
+					</li>
+					<li class="border_bottom">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+						<a class="jiathis_button_tsina"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:false,
+							hideMore:true
+						}
+						</script>
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+						<!-- JiaThis Button END -->
+						<p>新浪微博</p>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+		<!--end-->
+		<!--header-->
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		<!--云设计content-->
+		<style>
+			.ysj1_article_kg>div{width: 640px;}	
+		</style>
+		<section class="ysj1_content">
+			<article class="ysj1_article" style="width: 640px;">
+				
+				<div class="ysj1_article_left ysj1_article_left-left fl">
+					<div class="suaix">
+					<div class="select fl">
+							<a href="javascript:;">显示筛选<span><img src="${themepath}yun_images/yun_down.png"/></span></a>
+							<ul>
+							<li  data-Title="chufang-mc" onclick="_Click(this,'门窗')">门窗</li>
+							<li  data-Title="chufang-cg" onclick="_Click(this,'橱柜')">橱柜</li>
+							<li  data-Title="chufang-qm" onclick="_Click(this,'墙面')">墙面</li>
+							<li  data-Title="chufang-th" onclick="_Click(this,'天花')">天花</li>
+							<li  data-Title="chufang-dm" onclick="_Click(this,'地面')">地面</li>
+							</ul>
+						</div>
+						<div class="fr select_fl">部位:<a href="javascript:;" id='showSelect'></a></div>
+					</div>
+					#foreach($item in ${Helper.GetArticleList(-1,83,-1)})
+					<a href="javascript:;">
+                         <section  onclick="ShoppingGuide('${item.Url}','${item.DGPic}','${item.DGDesc}','${item.Price}')">
+						<div class="yun-shuluo">
+							<img title="chufang-mc" src="${item.Pic}"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">$item.title</strong>
+								<span class="fr">￥${item.Price}/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								${item.Description}
+							</p>
+							<button>选用</button>
+						</div>	
+                             </section>		
+					</a>
+					#end
+					#foreach($item in ${Helper.GetArticleList(-1,84,-1)})
+					<a href="javascript:;">
+                         <section  onclick="ShoppingGuide('${item.Url}','${item.DGPic}','${item.DGDesc}','${item.Price}')">
+						<div class="yun-shuluo">
+							<img title="chufang-cg" src="${item.Pic}"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">$item.title</strong>
+								<span class="fr">￥${item.Price}/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								${item.Description}
+							</p>
+							<button>选用</button>
+						</div>	
+                             </section>
+					</a>
+					#end
+					#foreach($item in ${Helper.GetArticleList(-1,85,-1)})
+					<a href="javascript:;">
+                         <section  onclick="ShoppingGuide('${item.Url}','${item.DGPic}','${item.DGDesc}','${item.Price}')">
+						<div class="yun-shuluo">
+							<img title="chufang-qm" src="${item.Pic}"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">$item.title</strong>
+								<span class="fr">￥${item.Price}/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								${item.Description}
+							</p>
+							<button>选用</button>
+						</div>	
+                             </section>
+					</a>
+					#end
+					#foreach($item in ${Helper.GetArticleList(-1,86,-1)})
+					<a href="javascript:;">
+                         <section  onclick="ShoppingGuide('${item.Url}','${item.DGPic}','${item.DGDesc}','${item.Price}')">
+						<div class="yun-shuluo">
+							<img title="chufang-th" src="${item.Pic}"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">$item.title</strong>
+								<span class="fr">￥${item.Price}/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								${item.Description}
+							</p>
+							<button>选用</button>
+						</div>	
+                           </section>			
+					</a>
+					#end
+					#foreach($item in ${Helper.GetArticleList(-1,87,-1)})
+					<a href="javascript:;">
+                         <section  onclick="ShoppingGuide('${item.Url}','${item.DGPic}','${item.DGDesc}','${item.Price}')">
+						<div class="yun-shuluo">
+							<img title="chufang-dm" src="${item.Pic}"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">$item.title</strong>
+								<span class="fr">￥${item.Price}/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								${item.Description}
+							</p>
+							<button>选用</button>
+						</div>		
+                             </section>		
+					</a>
+					#end
+                    <script>
+                        var _html = "";
+                        function ShoppingGuide(Ahref, ImageSrc, Title, Price) {
+                            _html = " <aside class='yun-dg'>";
+                            _html += "  <a href='" + Ahref + "'>";
+                            _html += "<div class='fl'>";
+                            _html += "		<img src='" + ImageSrc + "' alt=''></div><div class='fr'>";
+                            _html += "		<p>" + Title + "</p>";
+                            _html += "	<h2>￥" + Price + "</h2>";
+                            _html += "	<h3>更多相似商品</h3></div><div class='clear'></div></a></aside>";
+                        }
+                    </script>
+				</div>
+				<div class="ysj1_page ysj1_article_left-left-page fl"><span class="this_page">1</span>/<span class="zong_page"></span></div>
+				
+				<div class="ysj1_article_kg yun-chufangf2 yun-chufang">
+					<div><img title="chufang-mc" src="${themepath}yun-chufang/厨房f2-01门窗01.png"/></div>
+					<div><img title="chufang-cg" src="${themepath}yun-chufang/厨房f2-02橱柜08.png"/></div>
+					<div><img title="chufang-qm" src="${themepath}yun-chufang/厨房f2-03墙面01.png"/></div>
+					<div><img title="chufang-th" src="${themepath}yun-chufang/厨房f2-04天花01.png"/></div>
+					<div><img title="chufang-dm" src="${themepath}yun-chufang/厨房f2-05地面01.png"/></div>
+					<!--<section class="yun-kg1" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg2" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg3" data-Title="chufang-qm" onclick="_Click(this,'墙面')"></section>
+					<section class="yun-kg4" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg5" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg6" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>
+					<section class="yun-kg7" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<section class="yun-kg8" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<section class="yun-kg9" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<section class="yun-kg10" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<section class="yun-kg11" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg12" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg13" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg14" data-Title="chufang-qm" onclick="_Click(this,'墙面')"></section>
+					<section class="yun-kg15" data-Title="chufang-qm" onclick="_Click(this,'墙面')"></section>
+					<section class="yun-kg16" data-Title="chufang-mc" onclick="_Click(this,'门窗')"></section>
+					<section class="yun-kg17" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg18" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg19" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg20" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>
+					<section class="yun-kg21" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>
+					<section class="yun-kg22" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>
+					<section class="yun-kg23" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>-->
+					<svg>
+						<polygon class="yun-kg7" data-Title="chufang-th" onclick="_Click(this,'天花')" points="70,0 170,270 360,280 530,0">天花板</polygon>
+						<polygon class="yun-kg21" data-Title="chufang-dm" onclick="_Click(this,'地面')" points="190,590 350,590 535,800 80,800">地面</polygon>
+						<polygon class="yun-kg16" data-Title="chufang-mc" onclick="_Click(this,'门窗')" points="215,300 320,300 320,590 215,590">门</polygon>
+						<polygon class="yun-kg11" data-Title="chufang-cg" onclick="_Click(this,'橱柜')" points="0,0 0,800 80,800 190,590 190,480 130,480 130,375 175,375 170,270 360,280 360,380 410,380 410,460  350,460 350,590 535,800 640,800 640,0 530,0 360,280 170,270 70,0">橱柜</polygon>
+						<polygon class="yun-kg3" data-Title="chufang-qm" onclick="_Click(this,'墙面')" points="190,590 190,480 130,480 130,375 175,375 170,270 360,280 360,380 410,380 410,460 350,460 350,590  320,590 320,300 215,300 215,590">墙面</polygon>
+						
+						
+					</svg>
+
+
+					<span class="yun-dj" style="left: 45%;top:80%;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 37%;top:50%;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 10%;top:50%;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<span class="yun-dj" style="left: 30%;top:10%;">
+						<a href="javascript:;">
+							<div class="fl yun-dj-fl">
+								
+							</div>
+							<div class="fl yun-dj-fr">
+								<div class="fl">
+									<img src="${themepath}images/dg-img_03.png" alt="">
+								</div>
+								<div class="fl yun-dj-fr-fr">
+									<p>
+										包邮全铜花洒套装  淋浴花洒水龙头  带升降杆洗浴蓬莲头
+									</p>
+									<em>￥903.0</em>
+									<a href="javascript:;">更多相似商品</a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</a>
+					</span>
+					<!-- <section class="yun-kg1" data-Title="chufang-mc" onclick="_Click(this,'门窗')"></section>
+					<section class="yun-kg2" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
+					<section class="yun-kg3" data-Title="chufang-qm" onclick="_Click(this,'墙面')"></section>
+					<section class="yun-kg4" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<section class="yun-kg5" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section> -->
+				</div>
+				<script>
+				    function _Click(Val,showTitle){
+				    $('.yun-shuluo').parent().parent().hide();
+				    $(Val).html(_html);
+					$("#showSelect").html(showTitle);
+					$("img[title='" + $(Val).attr("data-Title") + "']", '.yun-shuluo').each(
+					function(){
+					    $(this).parent().parent().parent().show();
+					});
+				}
+				</script>
+				<div class="yun_right fr">
+					<div><span class="fl" style="color:#fff;">perspective</span><span class="fr qita"><a href="javascript:;" style="color: #fff;font-size:12px;">其他空间</a></span><div class="clear"></div></div>
+					<div class="yun_right_ul" style="overflow: hidden;">
+						#parse("../Public/yun_list.html")
+					</div>
+				</div>
+				<div class="fr yun_suod">
+					<img src="${themepath}yun_images/ok.png"/>
+				</div>
+				<div class="yun_r_bottom">
+					<a href="javascript:;" class="r_bottom1"></a>
+					<a href="javascript:;" class="r_bottom2"></a>
+					<a href="javascript:;" class="r_bottom3"></a>
+					<a href="javascript:;" class="r_bottom4"></a>
+					<a href="javascript:;" class="r_bottom5"></a>
+					<a href="javascript:;" class="clear"></a>
+				</div>
+			</article>
+		</section>
+		<!--end-->
+		<div class="yun_bottom"></div>
+		<div class="yun-copyright ">
+			 Copyright (c) 北京简尚装饰设计有限公司版权所有
+		</div>
+	</body>
+</html>
+

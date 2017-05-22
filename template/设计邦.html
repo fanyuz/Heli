@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+#parse("../Public/_head.html") 
+#parse("../Public/_header.html") 
+<style>
+		.friendlink{position: inherit;}
+		.footer{padding-bottom: 40px;}
+		.center_page_two{position: initial;margin: 160px auto 0;}
+		.red_bor:hover{color: #15cae9}
+	</style>
+<body>
+	<div class="sjb_top">
+		<h1>装修微社区 — 设计邦</h1>
+		<h2>装修有啥问题吗？来设计邦问问吧！</h2>
+	</div>
+	<div class="sjb_search_zjzx">
+		<div class="sjb_search">
+			<img src="${themepath}images/zhid.png" alt="">
+			<input type="text" id='searchTxt'><input type="button" onclick='Serach()' value="提交">
+			<script>
+			function Serach(){
+				window.location.href ="/sjb.aspx?Search="+$("#searchTxt").val();
+			}
+			</script>
+		</div>
+		<div class="sjb_zjzx"><img src="${themepath}images/zjzx.jpg" alt=""></div>
+		<div style="clear: both;"></div>
+	</div>
+	<div class="sjb_main">
+		<div class="sjb_left">
+			<ul>
+				#foreach($item in ${ArticleList})
+				<li>
+					<h1><a href="javascript:;">${item.title}</a></h1>
+					<p>${Helper.SubString(${item.Description},50,"...")}</p>
+					<div>${item.Description}</div>
+					<span>$!{item.Created.Tostring("yyyy-MM-dd")} <a href="javascript:;"><img src="${themepath}images/hand.jpg" alt="">&nbsp;&nbsp;116</a></span><br>
+					<span style="float: right;"><a href="javascript:;" style="color: #1ac7f1">查看答案>></a></span>
+					<p style="clear: both;"></p>
+				</li>
+				#end
+			</ul>
+			$!{pager}
+			<!-- <div class="sjb_page">
+				<a href="javascript:;">上一页</a>
+				<a href="javascript:;"class="active">1</a>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+				<a href="javascript:;">4</a>
+				<a href="javascript:;">5</a>
+				<a href="javascript:;">6</a>
+				<a href="javascript:;">7</a>
+				<a href="javascript:;">下一页</a>
+			</div> -->
+		</div>
+		<div class="sjb_right">
+			#set($i=1)#foreach($item in ${Helper.GetChannelList(2,${Channel.ID},1,-1)})
+			#if($i==1)
+			<div class="wxfx">
+				<div class="wxfx_title">微信分享</div>
+				<ul>
+					#foreach($item in ${Helper.GetArticleList(2,${item.ID})})
+					<a href="#if(${item.url}=='')javascript:;#else${item.url}#end" target="_blank"><li>
+						<img src="${item.pic}" alt="">
+						<h1>${Helper.SubString(${item.title},30,"...")}</h1>
+						<p>${Helper.SubString(${item.Description},38,"...")}</p>
+						<p style="clear: both;"></p>
+					</li></a>
+					#end
+				</ul>
+			</div>
+			#else
+			#foreach($item in ${Helper.GetArticleList(1,${item.ID})})
+			<div class="sjb_img">
+				<a href="#if(${item.url}=='')javascript:;#else${item.url}#end" target="_blank"><img src="${item.pic}" alt=""></a>
+			</div>
+			#end
+			#end
+			#set($i=$i+1)
+			#end
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<div class="sjb_alert">
+		<div class="sjbalert_box">
+			<div class="sjbalert_main">
+				<div class="sjbalert_zhong">
+					<h1>哪位可以告诉我餐厅四人桌尺寸是多少？</h1>
+					<div class="sjbalert_con">
+						<div class="da_title">答案<span>推荐于2016-02-21 06:08:26</span></div>
+						<div class="da_main">
+						
+						</div>
+						<div class="sjb_tj_dz">
+							<p>本回答由<a href="javascript:;">河狸装修</a>推荐</p>
+							<p><a href="javascript:;" class="sjb_zan">116</a><a href="javascript:;">110</a><span>|</span></p>
+							<p style="clear: both;"></p>
+						</div>
+					</div>
+				</div>
+				<div class="sjb_close"><a href="javascript:;"><img src="${themepath}images/cha.jpg" alt="" width="13" height="13"></a></div>
+			</div>
+		</div>
+		<script>
+
+			$('.sjb_left ul li').click(function(){
+				$('.sjb_alert').css('display','block');
+				$('.sjbalert_zhong h1').html($(this).find('h1 a').html());
+				$('.da_main').html($(this).find('div').html());
+				$('.da_title span').html('推荐于' + $(this).find('span').html());
+				$('.da_title span a').remove();
+			});
+
+			
+
+			var sjbOldOne = $('.sjb_tj_dz p:eq(1) a:eq(0)').html();
+			var sjbOlTwo = $('.sjb_tj_dz p:eq(1) a:eq(1)').html();
+			$('.sjb_tj_dz p:eq(1) a:eq(0)').mouseover(function(){
+				$('.sjb_tj_dz p:nth-child(2) a:nth-child(1)').html('赞');
+			});
+			$('.sjb_tj_dz p:nth-child(2) a:nth-child(1)').mouseleave(function(){
+				$('.sjb_tj_dz p:nth-child(2) a:nth-child(1)').html(sjbOldOne);
+			});
+
+			$('.sjb_tj_dz p:eq(1) a:eq(1)').mouseover(function(){
+				$('.sjb_tj_dz p:nth-child(2) a:nth-child(2)').html('踩');
+			});
+			$('.sjb_tj_dz p:eq(1) a:eq(1)').mouseleave(function(){
+				$('.sjb_tj_dz p:nth-child(2) a:nth-child(2)').html(sjbOlTwo);
+			});
+			$('.sjb_close').click(function(){
+				$('.sjb_alert').css('display','none');
+			});
+
+		</script>
+	</div>
+	<div style="clear: both;"></div>
+	<!--footer-->
+	<section style="width: 100%;background:#EAEAEA;margin-top:100px;">
+        <!--foot--->
+            #parse("../Public/foot.html")   
+        <!--foot end-->
+		<!--end-->
+		<!--copyright-->
+			 #parse("../Public/Footer.html") 
+	</section>
+</body>
+</html>

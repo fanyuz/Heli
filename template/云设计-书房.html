@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+	#parse("../Public/_head.html") 
+	<body>
+		<script src="${themepath}js/yun_js.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			.gy_ul li:hover{border: 1px solid #80a555;}
+			.gy_ul li:hover p{color: #80a555;}
+		</style>
+		<script>
+			$(function(){
+				$(".gy_ul li:nth-child(1)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/canl.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/can.png");
+				})
+				$(".gy_ul li:nth-child(2)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/canl.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/can.png");
+				})
+				$(".gy_ul li:nth-child(3)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/wol.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/wo.png");
+				})
+				$(".gy_ul li:nth-child(4)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/shul.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/shu.png");
+				})
+				$(".gy_ul li:nth-child(5)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/weil.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/wei.png");
+				})
+				$(".gy_ul li:nth-child(6)").hover(function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/chul.png");
+				},function(){
+					$(this).find("img").attr("src","/themes/default/Public/yun_images/chu.png");
+				})
+
+			})
+		</script>
+        <script type="text/javascript">
+            $(function () {
+                $(".display").hide();
+                $(".down").click(function () {
+                    $(".show").toggle();
+                    $(".display").toggle();
+                });
+                $(".ewm1").hide();
+                $(".ewm_hover").hover(function () {
+                    $(".ewm1").toggle();
+                });
+                $(".weixin_ewm").hide();
+                $(".weixin").hover(function () {
+                    $(".weixin_ewm").toggle();
+                });
+                $(".gnjs_yuan a").eq(0).css("border-color", "#3caec3").siblings().css("border-color", "#c0c0c0");
+                $(".gnjs_yuan a").hover(function () {
+                    $(this).css("border-color", "#3caec3").siblings().css("border-color", "#c0c0c0");
+                });
+                var zong_page = $(".ysj1_article_left>a").length;
+                $(".zong_page").text(zong_page);
+                //				$(".ysj1_article_left>a").click(function(){
+                //					var left_length=$(".ysj1_article_left>a").height();
+                //					//($(this).index());
+                //					var data_name=$(this).attr("data-name");
+                //					var cc=$(this).attr("data-images");	
+                //					var this_page=$(this).index()+1;
+                //					$(".this_page").text(this_page);
+                //					if(data_name=="chuanglian"){
+                //						$(".ysj1_article_kg>div").eq(7).css("background-image","url("+cc+")");
+                //					}else if(data_name=="dengju"){
+                //						$(".ysj1_article_kg>div").eq(0).css("background-image","url("+cc+")");
+                //					}else{}
+                //				});
+                var page = 0;
+                //				var yun_pc_length=$(".yun_pc ul").length;
+                //				var yun_pc_width=$(".yun_pc ul").width();
+
+
+
+
+
+
+
+                $(".yun_focus").eq(0).css("display", "block").siblings(".yun_focus").css("display", "none");
+                $(".yun_xuanx a").click(function () {
+                    $(this).css("color", "#00c5e8").siblings().css("color", "#fff");
+                    var cc = $(".yun_xuanx a").index(this);
+                    $(".yun_focus").eq(cc).css("display", "block").siblings(".yun_focus").css("display", "none");
+                    $(".fa").css("display", "none");
+                });
+
+
+
+
+
+
+                $(".yun_focus ul li").hover(function () {
+                    $(".yun_focus::before").css("display", "block");
+                });
+
+                $(".yun_focus ul li").click(function () {
+                    dd = $(this).find("img").attr("src");
+                    $(".fa").find("img").attr("src", dd);
+                    $(".fa").css("display", "block");
+                    $(".yun_focus").css("display", "none");
+                });
+                $(".fa>a").click(function () {
+                    $(".fa").css("display", "none");
+                    $(".yun_focus").eq(0).css("display", "block");
+
+                });
+
+
+                $(".fa").mouseover(function () {
+                    $(".er_fixed").css("display", "block");
+                    $(".er_fixed").mouseover(function () {
+                        $(this).css("display", "block");
+                    });
+                });
+                $(".fa").mouseout(function () {
+                    $(".er_fixed").css("display", "none");
+                    $(".er_fixed").mouseout(function () {
+                        $(this).css("display", "none");
+                    });
+                });
+
+
+                $(".yun_suod").click(function () {
+                    $(".ysj1_article_left").css("display", "none");
+                    $(".ysj1_page").css("display", "none");
+                    $(".yun_right").css("display", "none");
+                });
+
+                $(".select>ul>li").css("display", "none");
+                $(".select>a").click(function () {
+                    $(".select>ul>li").stop(false, true).slideToggle();
+                });
+
+                $(".select>ul>li").click(function () {
+                  
+                    $(".select>ul>li").css("display", "none");
+                });
+
+                $(".stur a").click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                });
+
+                $(".xia_stur").click(function () {
+                    $(".xiazai").css("display", "none");
+                });
+                $(".fen_stur").click(function () {
+                    $(".fenxiang").css("display", "none");
+                });
+
+
+              
+                $(".er_fixed_gb").click(function () {
+
+                    $(".fa").css("display", "none");
+                    $(".er_fixed").css("display", "none");
+                    $(".yun_xuanx>a").eq(0).css("color", "#00c5e8").siblings().css("color", "#fff");
+                    $(".yun_focus").eq(0).css("display", "block").siblings(".yun_focus").css("display", "none");
+                });
+                $(".er_fixed>a").click(function () {
+                    $(".yun_fixed").css("display", "none");
+                });
+                $(".yun_suod").click(function () {
+                    $(this).find("img").attr("src", "${themepath}yun_images/suoding.png");
+                });
+         
+                $(".gy_ul>li").click(function () {
+                    $(".yun_fixed").css("display", "block");
+                    $(".yun_xuanx>a").eq(0).css("color", "#00c5e8").siblings().css("color", "#fff");
+                });
+
+                $(".qita").click(function () {
+                    $(".yun_right_ul").toggle();
+                });
+                var index = 0;
+                var atricle_sqt_len = $(".atricle_sqt ul li").length;
+                var sgt_l = $(".sgt_l");
+                var sgt_r = $(".sgt_r");
+                $(".atricle_sqt ul li").eq(0).css("display", "block").siblings("li").css("display", "none");
+                sgt_r.click(function () {
+                    index++;
+                    if (index == atricle_sqt_len) {
+                        index = 0;
+                    };
+                    abc(index);
+                });
+                sgt_l.click(function () {
+                    index--;
+                    if (index == -1) {
+                        index = atricle_sqt_len - 1;
+                    };
+                    abc(index);
+                });
+                function abc(index) {
+                    $(".atricle_sqt ul li").eq(index).css("display", "block").siblings("li").css("display", "none");
+                };
+                $(".sgt_shut").click(function () {
+                    $(".section_sgt").css("display", "none");
+                });
+                $(".ping_bottom>a").eq(0).click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                    $(".section_sgt").css("display", "block");
+                });
+                $(".ping_bottom>a").eq(1).click(function () {
+                    $(".yun_pinggu").css("display", "none");
+                    $(".xiazai").css("display", "block");
+                });
+            });
+	</script>
+		<!--alert施工图-->
+			<section class="section_sgt" style="display: none;">
+				<div style="position: relative;width:1346px;margin:0 auto;">
+				<article class="atricle_sqt">
+					<ul>
+					#foreach($item in ${Helper.GetArticleList(-1,26,-1)})
+						<li>
+							<div style="width:655px;margin: 14px auto; 17px">
+								<a href="javascript:;" class="fr"><img src="${themepath}images/shut.png"/></a>
+								<div class="clear"></div>
+							</div>
+							<div class="sgt_top">
+								<div class="fl"><img src="${themepath}images/sgt_logo.jpg"/></div>
+								<div class="fr">${Article.title}</div>
+								<div class="clear"></div>
+							</div>
+							<div class="focus_sqt">
+								<table width="1002" border="2" cellpadding="0" cellspacing="0">
+		                          <tr>
+		                            <td width="35" style="font-size:14px;text-align: center;">类别</td>
+		                            <td width="140
+		                            " style="font-size:12px;padding-left:17px;">${Article.Leibie}</td>
+		                            <td width="35" align="center" style="font-size:14px;">内容</td>
+		                            
+		                            <td width="339" style="font-size:12px;padding-left:17px;">${Article.Content}</td>
+		                            <td width="48" align="center" style="font-size:14px;">团结号</td>
+		                            <td width="65" align="center" style="font-size:12px;">${Article.TuanJie}</td>
+		                          </tr>
+		                          <tr>
+		                            <td colspan="2" align="center" style="font-size:14px;">参考图片</td>
+		                            <td colspan="4" align="center" style="font-size:14px;">施工图</td>
+		                          </tr>
+		                          <tr>
+		                            <td height="187" colspan="2"><img src="${Article.Pic}"></td>
+		                            <td colspan="4" rowspan="3"> <img src="${Article.Pics}" width="480" height="367"></td>
+		                          </tr>
+		                          <tr>
+		                            <td colspan="2" align="center" style="font-size:14px;">施工说明</td>
+		                          </tr>
+		                          <tr>
+		                            <td height="154" colspan="2" style="font-size:12px;line-height:25px;">${Article.Description}</td>
+		                          </tr>
+		                        </table>
+		
+							</div>
+							<div style="text-align: center;"><a href="javascript:;" style="font-size: 14px;color:#fff;">下载本方案完整施工图纸</a></div>
+						</li>
+					#end
+					</ul>
+				</article>
+					<div class="sgt_RL sgt_l"></div>
+					<div class="sgt_RL sgt_r"></div>
+				</div>
+			</section>
+		<!--end-->
+		<!--内容alert-->
+			<div class="neirong_alert" style="display: none;">
+				<div class="nr_alert nr_alert1">
+					
+				</div>
+				<div class="nr_alert nr_alert2">
+					2
+				</div>
+				<div class="nr_alert nr_alert3">
+					3
+				</div>
+				<div class="nr_alert nr_alert4">
+					4
+				</div>
+				<div class="nr_alert nr_alert5">
+					5
+				</div>
+				<div class="nr_alert nr_alert6">
+					6
+				</div>
+				<div class="nr_alert nr_alert7">
+					7
+				</div>
+				<div class="nr_alert nr_alert8">
+					8
+				</div>
+			</div>		
+			
+		<!--end-->
+		<!--fixed-->
+		<div class="yun_fixed" style="display:block;">
+			<div class="yun_yunsheji">云设计</div>
+			<p class="yun_p">设计DIY  最专业 最权威 最互动  自主家装解决方案尽在云设计<br />
+			我们的专业技能+你的审美=河狸装修云设计</p>
+			<div class="yun_box"></div>
+			<div class="yun_str">CHOOSE CHAPTER</div>
+			<div class="yun_box_pc">
+				<div class="yun_xuanx">
+			     #foreach($item in ${Helper.GetChannelList(-1,18,-1,-1,"[index]")})
+					<a href="${item.url}">${item.Title}</a>
+			     #end
+				</div>
+				<div class="yun_pc_box">
+					<div class="yun_pc">
+						<div class="yun_pc_bg">
+							<div class="fa">
+								<a href="javascript:;"></a>
+								<img src=""/>
+							</div>
+							<div class="er_fixed">
+								<div href="javascript:;" class="er_fixed_gb"></div>
+								<a href="javascript:;">开始设计</a>
+							</div>
+							#foreach($item in ${Helper.GetChannelList(-1,18,-1,-1,"[index]")})
+							<div class="yun_focus">
+								<ul>
+									<li><img src="${item.TitleImage}"/></li>
+								</ul>					
+							</div>
+							#end
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end-->
+		<!--评估-->
+		<div class="yun_pinggu">
+			<div class="stur fr"><a href="javascript:;"></a></div>
+			<div class="clear"></div>
+			<h2 class="ping_top">室内设计方案评估</h2>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">风<br />格</div>
+				<div class="ping_box_fr fl">轻钢龙骨石膏板欧式造型顶，墙面欧式风格壁纸饰面，皮革硬包背景墙，实木复合木地板地面，搭配欧式古典家俱。轻钢龙骨石膏板欧式造型顶，墙面欧式风格壁纸饰面，皮革硬包背景墙，实木复合木地板地面，搭配欧式古典家俱。</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">造<br />价</div>
+				<div class="ping_box_fr fl">
+					<strong class="box_strong">此设计方案的工程参考造价为 600元/㎡</strong>
+					<p>
+						注意：<br />
+						<p>1.一般工程所说的单方造价是指人工+材料+机械费用总和再折算成每平方的费用。</p>
+						<p>2.该造价不包含方案中所涉及的电器设备、家俱及配饰等，</p>
+						<p>3.该造价不包含拆除费用，不包含工程公司的规费、税费等。</p>
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_box">
+				<div class="ping_box_fl fl">工<br />程</div>
+				<div class="ping_box_fr fl">
+					<strong class="box_strong">施工图</strong>
+					<p>
+						的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的 要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的要性 施工图的必要性施工图的必要性施工图
+					</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="ping_bottom"><a href="javascript:;"><img src="${themepath}yun_images/jia.png" style="margin:-5px 5px 0 0;"/>查看施工图纸</a><a href="javascript:;">图纸下载</a></div>
+		</div>
+		<!--end-->
+		<!--下载管理-->
+		<div class="xiazai">
+			<div class="xia_stur fr"><a href="javascript:;"></a></div>
+			<div class="clear"></div>
+			<h2 class="xia_top">下载管理</h2>
+			<div class="xia_ul">
+				<ul>
+					<li>
+						<div class="fl" style="padding-top:5px;"><img src="${themepath}yun_images/wenj2.png"/></div>
+						<div class="fl xia_jj">
+							<div><strong>餐厅方案效果图</strong></div>
+							<div style="color: #aeaeae;letter-spacing:2px;">需消耗<span style="color: #00c5e8;margin:0 1px;">5</span>枚狸币</div>
+						</div>
+						<div class="fr xz"></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="fl" style="padding-top:5px;"><img src="${themepath}yun_images/wenj2.png"/></div>
+						<div class="fl xia_jj">
+							<div><strong>装饰施工图纸</strong></div>
+							<div style="color: #aeaeae;letter-spacing:2px;">需消耗<span style="color: #00c5e8;margin:0 1px;">20</span>枚狸币</div>
+						</div>
+						<div class="fr xz"></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="fl" style="padding-top:5px;"><img src="${themepath}yun_images/wenj2.png"/></div>
+						<div class="fl xia_jj">
+							<div><strong>机电施工图纸</strong></div>
+							<div style="color: #aeaeae;letter-spacing:2px;">需消耗<span style="color: #00c5e8;margin:0 1px;">10</span>枚狸币</div>
+						</div>
+						<div class="fr xz"></div>
+						<div class="clear"></div>
+					</li>
+				</ul>
+			</div>
+			<div style="font-size: 12px;padding-right:73px;" class="fr"><span>您当前持有狸币 <span style="color:#00c5e8;">200 </span>枚</span><a href="javascript:;" style="color:#00c5e8;margin-left:16px;font-weight: bold;">打包下载</a></div>
+			<div class="clear"></div>
+			<div class="xz_p">
+				<p>施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要性施工图的必要</p>
+			</div>
+			<div class="ping_bottom"><a href="javascript:;"><img src="${themepath}yun_images/jia.png" style="margin:-5px 5px 0 0;"/>赚取狸币</a><a href="/hdhlb.aspx">充值狸币</a></div>
+		</div>
+		<!--end-->
+		<!--分享-->
+		<div class="fenxiang">
+			<div class="fen_stur fr"><a href="javascript:;"></a></div>
+			<div class="clear"></div>
+			<h2 class="xia_top">分享</h2>
+			<div class="bj_fenx">
+				<ul>
+					<li class="border_top">
+						<!-- <div class="fenx_box fenx_box1"></div> -->
+						<!-- JiaThis Button BEGIN -->
+							<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+								<a class="jiathis_button_qzone"></a>
+							</div>
+							<div class="clear"></div>
+							<script type="text/javascript" >
+							var jiathis_config={
+								siteNum:1,
+								sm:"qzone",
+								summary:"",
+								shortUrl:false,
+								hideMore:false
+							}
+							</script>
+							<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+							<!-- JiaThis Button END -->
+
+						<p>QQ空间</p>
+					</li>
+					<li class="border_top">
+						<div class="fenx_box fenx_box2"></div>
+						<p>分享到设计邦</p>
+					</li>
+					<li class="border_top">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+							<a class="jiathis_button_weixin"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:true,
+							hideMore:true
+						}
+						</script>
+						
+						<!-- JiaThis Button END -->
+
+						<p>微信好友</p>
+					</li>
+					<li class="border_bottom">
+						<div class="fenx_box fenx_box4"></div>
+						<p>朋友圈</p>
+					</li>
+					<li class="border_bottom">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+						<a class="jiathis_button_tqq"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:false,
+							hideMore:true
+						}
+						</script>
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+						<!-- JiaThis Button END -->
+
+						<p>腾讯微博</p>
+					</li>
+					<li class="border_bottom">
+						<!-- JiaThis Button BEGIN -->
+						<div class="jiathis_style_32x32" style="display: block;text-align: center;padding-left: 47px;">
+						<a class="jiathis_button_tsina"></a>
+						</div>
+						<div class="clear"></div>
+						<script type="text/javascript" >
+						var jiathis_config={
+							siteNum:10,
+							sm:"weixin",
+							summary:"",
+							boldNum:1,
+							shortUrl:false,
+							hideMore:true
+						}
+						</script>
+						<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+						<!-- JiaThis Button END -->
+						<p>新浪微博</p>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+		<!--end-->
+		<!--header-->
+		<!--header-->
+		 #parse("../Public/_header.html") 
+		<!--end-->
+		#parse("../Public/_User.html") 
+		
+		<!--云设计content-->
+		<section class="ysj1_content">
+			<article class="ysj1_article">
+				
+				<div class="ysj1_article_left fl">
+					<div class="suaix">
+						<div class="select fl">
+							<a href="javascript:;">显示筛选<span><img src="${themepath}yun_images/yun_down.png"/></span></a>
+							<ul>
+							#foreach($item in ${Helper.GetChannelList(-1,18,-1,-1,"[index]")})
+								<li>$item.Title</li>
+							#end
+							</ul>
+						</div>
+						<div class="fr select_fl">部位:<a href="javascript:;">天花</a></div>
+					</div>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-dengju" src="${themepath}yun-shufang/01灯具03.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-dengju" src="${themepath}yun-shufang/01灯具11.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-shuzhuo" src="${themepath}yun-shufang/02书桌椅09.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-peishi" src="${themepath}yun-shufang/03配饰07.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-shujia" src="${themepath}yun-shufang/04书架11.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-chuanglian" src="${themepath}yun-shufang/05窗帘10.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-tianhua" src="${themepath}yun-shufang/07天花10.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+					<a href="javascript:;">
+						<div class="yun-shuluo">
+							<img title="shufang-dimian" src="${themepath}yun-shufang/08地面11.png"/>
+						</div>
+						<div class="xiangqing">
+							<div class="xiangqing1">
+								<strong class="fl">木衣柜</strong>
+								<span class="fr">￥240/m^2</span>
+								<div class="clear"></div>
+							</div>
+							<p>
+								DAVE卫浴鸡蛋马桶坐便器虹吸式马桶小户型连体坐便器
+							</p>
+							<button>选用</button>
+						</div>					
+					</a>
+			
+					
+				</div>
+				<div class="ysj1_page fl"><span class="this_page">1</span>/<span class="zong_page"></span></div>
+				<div class="ysj1_article_kg yun-shufang">
+					<div><img title="shufang-dengju" src="${themepath}yun-shufang/01灯具02.png"/></div>
+					<div><img title="shufang-shuzhuo" src="${themepath}yun-shufang/02书桌椅01.png"/></div>
+					<div><img title="shufang-peishi" src="${themepath}yun-shufang/03配饰01.png"/></div>
+					<div><img title="shufang-shujia" src="${themepath}yun-shufang/04书架01.png"/></div>
+					<div><img title="shufang-chuanglian" src="${themepath}yun-shufang/05窗帘01.png"/></div>
+					<div><img title="shufang-qiangmina" src="${themepath}yun-shufang/06墙面01.png"/></div>
+					<div><img title="shufang-tianhua" src="${themepath}yun-shufang/07天花01.png"/></div>
+					<div><img title="shufang-dimian" src="${themepath}yun-shufang/08地面01.png"/></div>
+					<section class="yun-kg1" ></section>
+					<section class="yun-kg2"></section>
+					<section class="yun-kg3"></section>
+					<section class="yun-kg4"></section>
+					<section class="yun-kg5"></section>
+					<section class="yun-kg6"></section>
+					<section class="yun-kg8"></section>
+					<section class="yun-kg8"></section>
+				</div>
+				<div class="yun_right fr">
+					<div><span class="fl" style="color:#fff;">perspective</span><span class="fr qita"><a href="javascript:;" style="color: #fff;font-size:12px;">其他空间</a></span><div class="clear"></div></div>
+					<div class="yun_right_ul" style="overflow: hidden;">
+						<ul class="gy_ul">
+						#foreach($item in ${Helper.GetChannelList(-1,18,-1,-1,"[index]")})
+							<li class="right_ul_1">
+								<img src="$item.TitleImage"/>
+								<p>$item.Title</p>
+							</li>
+						#end
+						</ul>
+					</div>
+				</div>
+				<div class="fr yun_suod">
+					<img src="${themepath}yun_images/ok.png"/>
+				</div>
+				<div class="yun_r_bottom">
+					<a href="javascript:;" class="r_bottom1"></a>
+					<a href="javascript:;" class="r_bottom2"></a>
+					<a href="javascript:;" class="r_bottom3"></a>
+					<a href="javascript:;" class="r_bottom4"></a>
+					<a href="javascript:;" class="r_bottom5"></a>
+					<a href="javascript:;" class="clear"></a>
+				</div>
+			</article>
+		</section>
+			
+			
+			
+			
+		<!--end-->
+		<div class="yun_bottom"></div>
+	</body>
+</html>
+

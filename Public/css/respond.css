@@ -1,0 +1,359 @@
+@charset"utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 1024px) {
+	.header .nav .name {
+		font-size: 12px;
+		padding: 0 34px;
+	}
+	.header .head {
+		padding: 0 5px 0 1%;
+	}
+	
+	/*添加*/
+	.error-main .error_msg p {
+		font-size: 26px;
+		line-height: 25px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.header .nav .name {
+		font-size: 13px;
+	}
+	.head-right .item {
+		padding: 18px 12px 10px 0;
+	}
+	
+	/*添加*/
+	.box1,.box2{
+		width: 49.5%;
+	}
+	.box1 .bg img,.box2 .bg1 img,.box6 .bg img{
+		width: 60%;
+	}
+	.box4 .bg img,.box5 .bg img{
+		width:95.5%;
+	}
+	.box2 .bg{
+		display:none;
+	}
+	.box2 .bg1{
+		display:block;
+	}
+	.box2,.box5{
+		margin:0 0 0 1%;
+	}
+	.box3{
+		width:100%; 
+	}
+	.zuo{
+		float:none; width:100%;
+	}
+	.box4,.box5{
+		width:49.5%;
+		float:left;
+	}
+	.box5-cont{
+		max-height:316px;
+		overflow:hidden;
+	}
+	.box6{
+		width:100%;
+	}
+	.index .col-2 {
+		width: 32.93%;
+	}
+	.error-box .error_msg p {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	
+	/*新闻*/
+	.side-menu {
+		display: none;
+	}
+	.news-container .crumbs,
+	.news-box {
+		width: 95%;
+	}
+	.side-right {
+		width: 100%;
+		float: none;
+	}
+	.pagenum a {
+		display: none;
+	}
+	.pagenum .fa {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		margin: 0 20px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.error-main .error_msg p {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	
+	/*添加*/
+	.header .head-right .item {
+		display: none;
+	}
+	.header .list-btn {
+		display: block;
+	}
+	.nav {
+		position: absolute;
+		right: -280px;
+		top: -167px;
+		width: 100%;
+		max-width: 280px;
+		height: 100%;
+		background: #fff;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
+	.nav ul {
+		border-top: 1px solid #C0C0C0;
+		margin: 69px 0 0;
+		float: none;
+	}
+	.header .nav li {
+		display: block;
+		line-height: 72px;
+		font-size: 20px;
+		cursor: pointer;
+		background: #fff;
+		border-bottom: 1px solid #C0C0C0;
+		clear: both;
+	}
+	.header .nav li .name {
+		background: none;
+		font-size: 20px;
+		color: #2e2e2e;
+		padding: 0 0 0 5%;
+		line-height: 72px;
+		text-align: left;
+		width: calc(100% - 80px);
+	}
+	.header .nav li:hover .name {
+		background: none;
+		color: #000;
+	}
+	.header .nav .name:hover,
+	.header .nav .active .name,
+	.header .nav .active1 .name,
+	.header .nav .last:hover .name {
+		background: none;
+		color: #000;
+	}
+	.nav li .icon {
+		float: right;
+		width: 23px;
+		height: 70px;
+		line-height: 70px;
+		padding: 0 7.18% 0 0;
+		display: inline-block;
+	}
+	.nav li .open {
+		background: url(../images/open.png) 0 center no-repeat;
+	}
+	.nav li .up {
+		background: url(../images/up.png) 0 center no-repeat;
+	}
+	.nav .subnav {
+		display: none;
+		width: 100%;
+		position: relative;
+		top: 0;
+		z-index: 1;
+		padding: 0;
+		background: none;
+		transition: all 0s ease 0s;
+		-webkit-transform: all 0s ease 0s;
+	}
+	li .subnav,
+	li:hover .subnav {
+		top: 0;
+	}
+	.subnav .cont a {
+		font-size: 16px; float:none;
+	}
+	.subnav .cont {
+		width: 100%;
+	}
+	.nav .subnav .img {
+		display: none;
+	}
+	.nav .subnav a {
+		margin: 0;
+		padding: 0;
+		line-height: 60px;
+		text-align: center;
+		color: #fff;
+		background: #CF201B;
+		border-top: 1px solid #AD1C17;
+	}
+	.nav .subnav a:hover {
+		color: #fff;
+	}
+}
+@media screen and (max-width: 768px) {
+	/*404*/
+	.error-main .error_msg p {
+		font-size: 16px;
+		line-height: 29px;
+	}
+	.index .col-2 {
+		width: 49.6%;
+	}
+}
+@media screen and (max-width: 640px) {
+	.error-main {
+		text-align: center;
+	}
+	.error-main .error_img {
+		width: 60%;
+		margin: 0 auto;
+		float: none;
+	}
+	.error-main .error_msg {
+		width: 50%;
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.error-main .error_msg img {
+		width: 94%;
+	}
+	.error-main .error_msg p {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	/*添加*/
+	.index .col-4,
+	.index .row02 .box01,
+	.index .row02 .box02,
+	.index .row02 .box03 {
+		width: 100%;
+	}
+	.index .box1 .bg,
+	.index .box2 .bg,
+	.index .box2 .bg1,
+	.box4 .bg img,
+	.box5 .bg img,
+	.box6 .bg img{
+		display: none;
+	}
+	.index .box1 .item,
+	.index .box2 .item,
+	.index .box4 .item,
+	.index .box5 .item,
+	.index .box6 .item {
+		position:relative;
+	}
+	.box2{margin:0;margin-bottom:10px;}
+	.box1{height:100%; padding-bottom:13px;}
+	.box5{margin:0; margin-bottom:10px;}
+	.index .box04-cont {
+		position: relative;
+	}
+	.index .news .item {
+		position: relative;
+	}
+	
+	.index .row02 .text {
+		position: relative;
+	}
+	.index .row02 .box .text {
+		width: 100%;
+		height: auto;
+		padding: 20px 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+	.index .row02 .box .t-cover {
+		background: #2a7ae8;
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	.index .row02 .box h1,
+	.index .row02 .box:hover h1 {
+		font-size: 22px;
+		margin: 0;
+	}
+	.index .row02 .box .text-details {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	/**新闻**/
+	.side-right .list li .thumb {
+		width: 100%;
+		float: none;
+	}
+	.side-right .list li .li_right {
+		margin: 10px 0;
+	}
+	/*文化理念*/
+	.index .news {
+		padding: 0 0 20px;
+	}
+	.lb-nav a.lb-prev {
+		background: url(../images/zico_14.png) 5% 48% no-repeat;
+		background-size: 16%;
+	}
+	.lb-nav a.lb-next {
+		background: url(../images/zico_11.png) 95% 48% no-repeat;
+		background-size: 16%;
+	}
+}
+@media screen and (max-width : 560px){
+    .advertising .col-6.line{
+        padding: 0;
+        border: 0;
+    }
+    .advertising .col-6{
+        width: 100%;
+    }
+	.advertising .col-6 img{
+		padding: 20px 0;
+	}
+
+}
+@media screen and (max-width: 480px) {
+	/*404*/
+	.error-main .error_msg p {
+		font-size: 20px;
+	}
+	.index .row02 .more {
+		margin: 2% auto 0;
+	}
+	.header .logo img {
+		min-width: 220px;
+	}
+	.header .list-btn {
+		padding: 0;
+		margin: 11px 0 0;
+		width: 34px;
+	}
+	.header .logo {
+		padding: 10px 0;
+	}
+
+	.layer-box {
+		top: 10%;
+		left: 5%;
+		width: 90%;
+		height: 80%;
+	}
+}
+@media screen and (max-width: 320px) {
+	.index .col-2 {
+		width: 100%;
+	}
+}

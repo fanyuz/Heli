@@ -1,0 +1,102 @@
+﻿<head>
+	<meta charset="utf-8" />
+	<title>${sitename}</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="${themepath}css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="${themepath}css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="${themepath}css/jquery.fullPage.css"/>
+	<link rel="stylesheet" type="text/css" href="${themepath}css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="${themepath}css/default.css"/>
+	<link rel="stylesheet" type="text/css" href="${themepath}css/tilteffect.css"/>
+	<script src="${themepath}js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${themepath}js/jquery.fullPage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${themepath}js/focus.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${themepath}js/selectivizr-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${themepath}js/selectivizr.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${themepath}js/regsiter.js" type="text/javascript" charset="utf-8"></script>
+    <script src="${themepath}js/RCC.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		  <script src="${themepath}js/selectivizr-min.js"></script>
+		  <script src="${themepath}js/html5shiv.min.js" type="text/javascript"></script>
+		<![endif]-->
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $('#fullpage').fullpage({
+	            anchors: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'],
+	            sectionsColor: ['#fff', '#000', '#fff', '#959595', '#fff', '#EAEAEA'],
+	            navigation: true,
+	            menu: '#menu',
+	            navigationTooltips: ['1', '2', '3', '4', '5', '6'],
+	            controlArrowColor: '#fff',
+	            css3: true,
+	            loopHorizontal: true,
+	            verticalCentered: false,
+	            afterLoad: function (index) {
+	                if (index == "p1") { index = 1; $(".downn img").attr("src", "${themepath}images/down.png"); };
+	                if (index == "p2") { index = 2; $(".downn img").attr("src", "${themepath}images/down.png"); };
+	                if (index == "p3") { index = 3; $(".downn img").attr("src", "${themepath}images/down.png"); };
+	                if (index == "p4") { index = 4; $(".downn img").attr("src", "${themepath}images/down.png"); };
+	                if (index == "p5") { index = 5; $(".downn img").attr("src", "${themepath}images/down.png"); };
+	                if (index == "p6") { index = 0; $(".downn img").attr("src", "${themepath}images/scroll_up.png"); };
+	                $(".downn").attr("href", "#p" + (index + parseInt(1)));
+	            }
+	        });
+	    });
+	</script>
+	<script type="text/javascript">
+	    $(function () {
+	        $(".display").hide();
+	        $(".down").click(function () {
+	            $(".show").toggle();
+	            $(".display").toggle();
+	        });
+	        $(".ewm1").hide();
+	        $(".ewm_hover").hover(function () {
+	            $(".ewm1").toggle();
+	        });
+	        $(".weixin_ewm").hide();
+	        $(".weixin").hover(function () {
+	            $(".weixin_ewm").toggle();
+	        });
+	        $(".yh_shut").click(function () {
+	            $(".yonghuzhongxin").css("display", "none");
+	        });
+
+	        $(".biu_hover_1").hover(function () {
+	            $(this).parent().parent().find(".biu_no1").css("margin-top", "-190px");
+	        }, function () {
+
+	        })
+	        $(".biu_no2").hover(function () {
+	            $(this).parent().find(".biu_no1").css("margin-top", "-190px");
+	        }, function () {
+	            $(this).parent().find(".biu_no1").css("margin-top", "0");
+	        })
+
+
+
+
+	        $(".nav_a1").css({ "color": "#23c9e9", "background": "url(/themes/default/Public/images/nav_a1.png) no-repeat top center" });
+
+	    });
+	</script>
+	<!--
+	 scrollingSpeed 滚动速度
+	verticalCentered内容是否垂直居中
+	 menu 绑定导航菜单  	绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动
+	 anchors 定义锚链接
+	 navigation 是否显示导航
+	 navigationPosition 导航的位置
+	 navigationTooltips 导航的提示
+	 slidesNavigation 左右滚动的导航是否显示
+	 slidesNavPosition 左右滚动的导航的位置
+	 controlArrowColor 左右箭头的颜色
+	 navigationColor 导航的颜色
+	 loopBottom 到底是否返回最上
+	 loopTop 到顶是否返回最低
+	 loopHorizontal 左右是否循环
+	 slidesColor 设置背景颜色
+	 loopHorizontal 	左右滑块是否循环滑动		
+		
+	-->
+	</head>

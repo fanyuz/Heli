@@ -1,0 +1,41 @@
+﻿<div class="yun_fixed" style="display: none;">
+			<div class="yun_yunsheji"><img src="${themepath}images/yun-tt_03.png" alt=""></div>
+			<p class="yun_p">设计DIY  最专业 最权威 最互动  自主家装解决方案尽在云设计<br />
+			我们的专业技能+你的审美=河狸装修云设计</p>
+			<div class="yun_box"></div>
+			<div class="yun_str">CHOOSE CHAPTER</div>
+			<div class="yun_box_pc">
+				<div class="yun_xuanx">
+                    <a  href="javascript:;">客厅</a>
+					<a  href="javascript:;">餐厅</a>
+                    <a  href="javascript:;">卧室</a>
+                    <a  href="javascript:;">书房</a>
+                    <a  href="javascript:;">厨房</a>
+                    <a  href="javascript:;">卫生间</a>
+				</div>
+				<div class="yun_pc_box">
+					<div class="yun_pc">
+						<div class="yun_pc_bg">
+							<div class="yun-banner">
+								<ul>
+                                     #foreach($item in ${Helper.GetChannelList(-1,18,-1,-1,"[index]")})
+									<li data-title="$item.title"><a href="${item.Url}?action=11">
+										<img src="$item.ImageList" alt="">
+										<div class="ksjs">
+											<span>开始设计</span>
+										</div>
+									</a></li>
+                                    #end
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="yun-banner-RL yun-banner-l">
+						<img src="${themepath}images/banner_left.png" alt="">
+					</div>
+					<div class="yun-banner-RL yun-banner-r">
+						<img src="${themepath}images/banner_right.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
