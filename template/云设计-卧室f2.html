@@ -2,7 +2,22 @@
 <html>
 	#parse("../Public/_head.html") 
 	<body>
-		
+		<style type="text/css">
+			
+			svg{
+				width: 1200px;
+				height: 800px;
+				display: block;
+				position: absolute;
+				top: 0px;left: 50%;
+				transform: translateX(-50%);
+				z-index: 50;
+			}
+			polygon{
+				fill: rgba(0,0,0,.0);
+				stroke: rgba(255,255,255,0.0);
+			}
+		</style>
         <script type="text/javascript">
             $(function () {
 
@@ -564,7 +579,7 @@
 					<div><img title="ws-qm" src="${themepath}yun-woshi/卧室f2-04墙面01.png"/></div>
 					<div><img title="ws-th" src="${themepath}yun-woshi/卧室f2-05天花01.png"/></div>
 					<div><img title="ws-dm" src="${themepath}yun-woshi/卧室f2-06地面01.png"/></div>
-					<section class="yun-kg1" data-title="ws-qm" onclick="_Click(this,'墙面')"></section>
+					<!--<section class="yun-kg1" data-title="ws-qm" onclick="_Click(this,'墙面')"></section>
 					<section class="yun-kg2" data-title="ws-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg3" data-title="ws-c" onclick="_Click(this,'床')"></section>
 					<section class="yun-kg4" data-title="ws-qm" onclick="_Click(this,'墙面')"></section>
@@ -578,13 +593,22 @@
 					<section class="yun-kg12" data-title="ws-c" onclick="_Click(this,'床')"></section>
 					<section class="yun-kg13" data-title="ws-dt" onclick="_Click(this,'地毯')"></section>
 					<section class="yun-kg14" data-Title="ws-dm" onclick="_Click(this,'地面')"></section>
-					<section class="yun-kg15" data-title="ws-dt" onclick="_Click(this,'地毯')"></section>
+					<section class="yun-kg15" data-title="ws-dt" onclick="_Click(this,'地毯')"></section>-->
 					<!-- <section class="yun-kg1" data-title="ws-dj" onclick="_Click(this,'灯具')"></section>
                     <section class="yun-kg2" data-title="ws-c" onclick="_Click(this,'床')"></section>
                     <section class="yun-kg3" data-title="ws-dt" onclick="_Click(this,'地毯')"></section>
 					<section class="yun-kg4" data-title="ws-qm" onclick="_Click(this,'墙面')"></section>
 					<section class="yun-kg5" data-title="ws-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg6" data-Title="ws-dm" onclick="_Click(this,'地面')"></section> -->
+					
+					<svg>
+						<polygon class="yun-kg2" data-title="ws-th" onclick="_Click(this,'天花')" points="150,0 510,260 930,220 1020,0">天花</polygon>
+						<polygon class="yun-kg8" data-title="ws-qm" onclick="_Click(this,'墙面')" points=" 0,0 150,0 510,260 930,220 1020,0 1200,0 1200,800 1130,800 936,640 810,640 810,530 510,530 510,400 0,400">墙面</polygon>
+						<polygon class="yun-kg3" data-title="ws-c" onclick="_Click(this,'床')" points="0,400 510,400 510,530 810,530 810,745 0,745">床</polygon>
+						<polygon class="yun-kg14" data-Title="ws-dm" onclick="_Click(this,'地面')" points="0,745 810,745 810,640 936,640 1130,800 0,800">地面</polygon>
+						<polygon class="yun-kg15" data-title="ws-dt" onclick="_Click(this,'地毯')" points="610,745 810,745 810,640 910,640 955,800 610,800">地毯</polygon>
+						<polygon class="yun-kg1" data-title="ws-dj" onclick="_Click(this,'灯具')" points="560,40 740,40 740,260 560,260">灯具</polygon>
+					</svg>
 					<span class="yun-dj" style="left: 25%;top: 28%;">
 						<a href="javascript:;">
 							<div class="fl yun-dj-fl">

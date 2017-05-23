@@ -354,16 +354,16 @@ a{text-decoration:none;}
 .center_top p{line-height:10px;font-weight: bold;}
 .center_top>strong{	font-weight:100;font-size:12px;}
 .center_ul{}
-.center_ul li{width:31%;float:left;font-size:12px;border:1px solid #ccc;transition:all 0.3s ease 0s;padding-bottom: 20px;height: 450px;}
+.center_ul li{cursor: pointer;width:31%;float:left;font-size:12px;border:1px solid #ccc;transition:all 0.3s ease 0s;padding-bottom: 20px;height: 450px;}
 .center_ul_li{position: relative;}
 .center_ul_li:nth-child(1):before{content: "";position: absolute;width:80px;height: 45px;background: url(../images/iconfont-caidan.png) no-repeat center center;top:-20px;left:0;} 
 .center_ul li:hover{box-shadow:0px 0px 5px #ccc inset;}
 .center_ul li:nth-child(2){margin:0 2.5%;}
 .center_ul li h1{text-align: center;font-weight:bold;font-size: 18px;line-height:80px;position:relative;}
 .center_ul li h1:before{content:"";position:absolute;border-bottom:1px solid #ccc;width:200px;height: 1px;bottom:0;left:50%;margin-left:-100px;}
-.center_ul li>div{padding:0 20px;}
-.jj{margin:8px 0;}
-.rig{text-align: right;}
+.center_ul li>div{padding:0 30px;cursor: pointer;}
+.jj{margin:8px 0;cursor: pointer;}
+.rig{text-align: right;cursor: pointer;}
 .rig a{color: #363636;text-decoration: underline;}
 .center_ul_div{background: #fff;width:100px;height:40px;text-align:center;position: relative;margin: -20px auto 0;}
 /*end*/

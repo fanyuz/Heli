@@ -2,7 +2,21 @@
 <html>
 	#parse("../Public/_head.html") 
 	<body>
-		
+		<style type="text/css">
+			svg{
+				width: 1200px;
+				height: 800px;
+				display: block;
+				position: absolute;
+				top: 0px;left: 50%;
+				transform: translateX(-50%);
+				z-index: 50;
+			}
+			polygon{
+				fill: rgba(0,0,0,.0);
+				stroke: rgba(255,255,255,0.0);
+			}
+		</style>
         <script type="text/javascript">
             $(function () {
 
@@ -675,7 +689,7 @@
 					<div><img title="keting-th" src="${themepath}yun-keting/客厅f2-09天花01.png"/></div>
 					<div><img title="keting-dt" src="${themepath}yun-keting/客厅f2-10地毯01.png"/></div>
 					<div><img title="dm" src="${themepath}yun-keting/客厅f2-11地面01.png"/></div>
-					<section class="yun-kg1" data-Title="keting-dj" onclick="_Click(this,'灯具')"></section>
+					<!--<section class="yun-kg1" data-Title="keting-dj" onclick="_Click(this,'灯具')"></section>
 					<section class="yun-kg2" data-Title="keting-dsg" onclick="_Click(this,'电视柜')"></section>
 					<section class="yun-kg3" data-Title="keting-ps" onclick="_Click(this,'配饰')"></section>
 					<section class="yun-kg4" data-Title="keting-sf" onclick="_Click(this,'沙发')"></section>
@@ -685,7 +699,19 @@
                     <section class="yun-kg8" data-Title="keting-cl" onclick="_Click(this,'窗帘')"></section>
 					<section class="yun-kg9" data-Title="keting-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg10" data-Title="keting-dt" onclick="_Click(this,'地毯')"></section>
-                    <section class="yun-kg11" data-Title="dm" onclick="_Click(this,'地面')"></section>
+                    <section class="yun-kg11" data-Title="dm" onclick="_Click(this,'地面')"></section>-->
+                    <svg>
+						<polygon class="yun-kg9" data-Title="shufang-th" onclick="_Click(this,'天花')" class="" points="0,0 0,80 450,310 960,280 1130,0">天花板</polygon>
+						<polygon class="yun-kg1" data-Title="shufang-dj" onclick="_Click(this,'灯具')" points="520,110 730,110 730,330 520,330">灯具</polygon>
+						<polygon class="yun-kg7" data-Title="shufang-bjq" onclick="_Click(this,'背景墙')" points="0,80 450,310 450,500 400,500 400,290 255,255 255,500 80,500 80,700 0,730">背景墙</polygon>
+						<polygon class="yun-kg4" data-Title="shufang-ps" onclick="_Click(this,'配饰')" points="400,500 400,290 255,255 255,500">配饰</polygon>
+						<polygon class="yun-kg6" data-Title="shufang-dsq" onclick="_Click(this,'电视墙')" points="960,280 1130,0 1200,0 1200,800 1170,800 1060,730 1060,450 960,450">电视墙</polygon>
+						<polygon class="yun-kg8" data-Title="shufang-yc" onclick="_Click(this,'阳台、窗帘')" points="450,500 450,310 960,280 960,500">窗帘</polygon>
+						<polygon class="yun-kg3" data-Title="shufang-sfz" onclick="_Click(this,'沙发组')" points="590,740 80,740 80,500 800,500 800,620 590,620">沙发</polygon>
+						<polygon class="yun-kg2" data-Title="shufang-dsg" onclick="_Click(this,'电视柜')" points="900,500 960,500 960,450 1060,450 1060,730 1170,800 900,800">电视柜</polygon>
+						<polygon class="yun-kg5" data-Title="shufang-dt" onclick="_Click(this,'地毯')" points="590,620 800,620 800,740 590,740">地毯</polygon>
+						<polygon class="yun-kg10" data-Title="shufang-dm" onclick="_Click(this,'地面')" points="0,730 80,700 80,740 800,740 800,500 900,500 900,800 0,800">地面</polygon>
+					</svg>
 
                     <span class="yun-dj" style="left: 80%;top:50%;width: 350px;">
 						<a href="javascript:;">

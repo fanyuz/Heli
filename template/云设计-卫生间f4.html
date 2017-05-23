@@ -2,7 +2,21 @@
 <html>
 	#parse("../Public/_head.html") 
 	<body>
-		
+		<style type="text/css">
+			svg{
+				width: 640px;
+				height: 800px;
+				display: block;
+				position: absolute;
+				top: 0px;left: 50%;
+				transform: translateX(-50%);
+				z-index: 50;
+			}
+			polygon{
+				fill: rgba(0,0,0,.0);
+				stroke: rgba(255,255,255,0.0);
+			}
+		</style>
         <script type="text/javascript">
             $(function () {
 
@@ -567,7 +581,7 @@
 					<div><img title="wsjf2-th" src="${themepath}yun-weishengjian/卫生间f4-05天花01.png"/></div>
 					<div><img title="wsjf2-dm" src="${themepath}yun-weishengjian/卫生间f4-06地面01.png"/></div>
 					
-					<section class="yun-kg1" data-title="wsjf2-qm" onclick="_Click(this,'墙面')"></section>
+					<!--<section class="yun-kg1" data-title="wsjf2-qm" onclick="_Click(this,'墙面')"></section>
 					<section class="yun-kg2" data-title="wsjf2-qm" onclick="_Click(this,'墙面')"></section>
 					<section class="yun-kg3" data-title="wsjf2-zsh" onclick="_Click(this,'装饰画')"></section>
 					<section class="yun-kg4" data-title="wsjf2-th" onclick="_Click(this,'天花')"></section>
@@ -587,9 +601,16 @@
 					<section class="yun-kg18" data-Title="wsjf2-dm" onclick="_Click(this,'地面')"></section>
 					<section class="yun-kg19" data-title="wsjf2-xst" onclick="_Click(this,'洗手台')"></section>
 					<section class="yun-kg20" data-title="wsjf2-xst" onclick="_Click(this,'洗手台')"></section>
-					<section class="yun-kg21" data-title="wsjf2-xst" onclick="_Click(this,'洗手台')"></section>
+					<section class="yun-kg21" data-title="wsjf2-xst" onclick="_Click(this,'洗手台')"></section>-->
 					
-
+					<svg>
+						<polygon class="yun-kg4" data-title="wsjf2-th" onclick="_Click(this,'天花')" points="55,0 110,200 430,260 640,70 640,0">天花</polygon>
+						<polygon class="yun-kg1" data-title="wsjf2-qm" onclick="_Click(this,'墙面')" points=" 0,0 55,0 110,200 430,260 640,70 640,450 350,450 350,620 270,620 270,520 0,520">墙面</polygon>
+						<polygon class="yun-kg14" data-title="wsjf2-mt" onclick="_Click(this,'马桶')" points="0,520 270,520 270,750 0,750 ">坐便器</polygon>
+						<polygon class="yun-kg3" data-title="wsjf2-zsh" onclick="_Click(this,'装饰画')" points="30,160 100,160 100,490 30,490">装饰画</polygon>
+						<polygon class="yun-kg19" data-title="wsjf2-xst" onclick="_Click(this,'洗手台')" points="350,450 640,450 640,800 610,800 350,620">洗手台</polygon>
+						<polygon class="yun-kg18" data-Title="wsjf2-dm" onclick="_Click(this,'地面')" points="0,750 270,750 270,620 350,620 610,800 0,800">地面</polygon>
+					</svg>
 					<span class="yun-dj" style="left: 40%;top:5%;">
 						<a href="javascript:;">
 							<div class="fl yun-dj-fl">

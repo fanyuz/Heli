@@ -244,7 +244,7 @@
 							<li>
 								<div class="center_ul_div"><img src="${themepath}images/iconfont-caidan.png"/></div>
 								<h1>装修方式-<strong>全包</strong></h1>
-								<div>
+								<div class="content_a">
 									<p class="jj">
 										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
 									</p>
@@ -274,7 +274,7 @@
 							<li>
 								<div class="center_ul_div"><img src="${themepath}images/shoj.png"/></div>
 								<h1>装修方式-<strong>全包</strong></h1>
-								<div>
+								<div class="content_a">
 									<p class="jj">
 										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
 									</p>
@@ -304,7 +304,7 @@
 							<li>
 								<div class="center_ul_div"><img src="${themepath}images/1.png"/></div>
 								<h1>装修方式-<strong>全包</strong></h1>
-								<div>
+								<div class="content_a">
 									<p class="jj">
 										从设计、采购到施工全部由装饰公司负责；业主只负责设计、工程预算的审核及参与工程验收。
 									</p>
@@ -515,6 +515,17 @@
 		</div>
 		<script src="${themepath}js/tiltfx.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+	<script type="text/javascript">
+		var contA = document.getElementsByClassName("content_a");
+		console.log(contA)
+		for (var i=0;i<contA.length;i++) {
+			contA[i].onclick = function(){
+				window.location.href = "/zxb.aspx"
+			}
+			
+		}
+		
+	</script>
 </html>
 
 

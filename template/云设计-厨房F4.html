@@ -2,7 +2,21 @@
 <html>
 	#parse("../Public/_head.html") 
 	<body>
-		
+		<style type="text/css">
+			svg{
+				width: 640px;
+				height: 800px;
+				display: block;
+				position: absolute;
+				top: 0px;left: 50%;
+				transform: translateX(-50%);
+				z-index: 50;
+			}
+			polygon{
+				fill: rgba(0,0,0,.0);
+				stroke: rgba(255,255,255,0.0);
+			}
+		</style>
         <script type="text/javascript">
             $(function () {
 
@@ -547,7 +561,7 @@
 					<div><img title="chufang-th" src="${themepath}yun-chufang/厨房f4-04天花01.png"/></div>
 					<div><img title="chufang-dm" src="${themepath}yun-chufang/厨房f4-05地面01.png"/></div>
 					
-					<section class="yun-kg1" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
+					<!--<section class="yun-kg1" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg2" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg3" data-Title="chufang-th" onclick="_Click(this,'天花')"></section>
 					<section class="yun-kg4" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
@@ -557,9 +571,16 @@
 					<section class="yun-kg8" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
 					<section class="yun-kg9" data-Title="chufang-qm" onclick="_Click(this,'墙面')"></section>
 					<section class="yun-kg10" data-Title="chufang-cg" onclick="_Click(this,'橱柜')"></section>
-					<section class="yun-kg11" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>
+					<section class="yun-kg11" data-Title="chufang-dm" onclick="_Click(this,'地面')"></section>-->
 
-
+					<svg>
+						<polygon class="yun-kg1" data-Title="chufang-th" onclick="_Click(this,'天花')" points="0,0 0,140 175,140 175,220 640,220 640,0">天花板</polygon>
+						<polygon class="yun-kg7" data-Title="chufang-cg" onclick="_Click(this,'橱柜')" points="0,140 175,140 175,220 540,220 540,150 590,150 590,96 640,96 640,700 475,620 65,675 0,770">橱柜</polygon>
+						<polygon class="yun-kg9" data-Title="chufang-qm" onclick="_Click(this,'墙面')" points="0,350 640,350 640,475 0,475">墙面</polygon>
+						<polygon class="yun-kg6" data-Title="chufang-c" onclick="_Click(this,'窗')" points="175,220 360,220 360,475 175,475">窗户</polygon>
+						<polygon class="yun-kg11" data-Title="chufang-dm" onclick="_Click(this,'地面')" points="0,770 65,675 475,620 640,700 640,800 0,800">地面</polygon>
+						
+					</svg>
 					<span class="yun-dj" style="left: 45%;top:5%;">
 						<a href="javascript:;">
 							<div class="fl yun-dj-fl">
