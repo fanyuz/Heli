@@ -346,7 +346,7 @@
 						</p>
 					</article>
 					<article class="design">
-						<ul>
+						<ul id="content_ysj">
 							<li>
 								<div><img src="${themepath}images/page4_1_03.png"></div>
 								<h1>客 厅</h1>
@@ -516,14 +516,21 @@
 		<script src="${themepath}js/tiltfx.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 	<script type="text/javascript">
+		//跳转到装修帮
 		var contA = document.getElementsByClassName("content_a");
-		console.log(contA)
 		for (var i=0;i<contA.length;i++) {
 			contA[i].onclick = function(){
 				window.location.href = "/zxb.aspx"
 			}
-			
 		}
+		
+		//跳转到云设计
+		for (var i=0;i<content_ysj.children.length;i++) {
+			content_ysj.children[i].onclick = function(){
+				window.location.href = "http://k.bjzslt.cn/ct.aspx"
+			}
+		}
+		
 		
 	</script>
 </html>
